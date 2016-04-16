@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amar Flora</title>
+
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+
+</head>
+<body>
+	<div class="container">
+	
+		<h1>Olá {{ user }} - {{ age }}</h1>
+		<a class="btn btn-default" href="{% url 'gallery' %}">Ir para a galeria</a>
+	</div>
+	<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
