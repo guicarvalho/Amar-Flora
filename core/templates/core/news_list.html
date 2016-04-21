@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Notícias {% endblock %}
+
+{% block content %}
+
+	<h1>Últimas notícias</h1>
+
+	<ul>
+	{% for new in news %}
+		<li>
+			<div>
+				<h2>{{ new.title }}</h2>
+				<p>{{ new.description }}</p>
+			</div>
+		</li>
+	{% endfor %}
+	</ul>
+
+{% endblock %}

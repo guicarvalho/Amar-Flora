@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Novo Associado {% endblock %}
+
+{% block content %}
+
+	{% if messages %}
+		<ul>
+	    {% for message in messages %}
+	    	<li
+	    	{% if 'error' in	message.tags %}
+	    		class="alert-danger"
+	    	{% elif 'success' in message.tags %}
+	    		class="alert-success"
+	    	{% endif %}>{{ message }}
+	    	</li>
+	    {% endfor %}
+		</ul>
+	{% endif %}
+
+	<h1>Seja bem vindo a Amar Flora</h1>
+	<form action="{% url 'associate-new' %}" method="post"> {% csrf_token %}
+		{{ form.as_p }}
+		
+		<button type="submit" class="btn btn-primary">Confirmar</button>
+	</form>
+
+{% endblock %}

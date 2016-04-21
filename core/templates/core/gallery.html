@@ -1,3 +1,9 @@
-{% extend 'base.html' %}
+{% extends 'core/base.html' %}
 
-My Gallery
+{% block title %} Galeria {% endblock %}
+
+{% block content %}
+	<div class="jumbotron">
+		<h1>Minha Galeria</h1>
+	</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Associados {% endblock %}
+
+{% block content %}
+
+	<h1>Lista de Associados Amar Flora</h1>
+
+	<ul>
+	{% for associate in associates %}
+		<li>{{ associate.name }}</li>
+	{% endfor %}
+	</ul>
+
+	<a href="{% url 'associate-new' %}" class="btn btn-lg btn-block btn-primary">Seja um associados</a>
+
+{% endblock %}
