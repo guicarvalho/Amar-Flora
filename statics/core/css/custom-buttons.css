@@ -1,0 +1,33 @@
+.btn-custom {
+  background-color: #44b25a;
+  border-color: #44b25a;
+  color: #fff;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #3da051;
+  border-color: #368d47;
+  color: #fff;
+}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #44b25a;
+  border-color: #44b25a;
+}
+
+a.btn-custom,
+a.btn-custom:hover {
+	color: #fff;
+}

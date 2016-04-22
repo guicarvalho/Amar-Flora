@@ -22,7 +22,7 @@
 	<form action="{% url 'associate-new' %}" method="post"> {% csrf_token %}
 		{{ form.as_p }}
 		
-		<button type="submit" class="btn btn-primary">Confirmar</button>
+		<button type="submit" class="btn btn-custom">Confirmar</button>
 	</form>
 
 {% endblock %}

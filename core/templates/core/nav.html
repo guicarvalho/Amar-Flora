@@ -1,11 +1,24 @@
-<nav class="container" style="background:#eee">
-	<ul class="nav nav-pills">
-	  <li role="presentation"><a href="{% url 'home' %}">Amar Flora</a></li>
-	  <li role="presentation"><a href="{% url 'associate-list' %}">Associados</a></li>
-	  <li role="presentation"><a href="#">Galeria</a></li>
-	  <li role="presentation"><a href="{% url 'news-list' %}">Notícias</a></li>
-	  <li role="presentation"><a href="#">Parceiros</a></li>
-	  <li role="presentation"><a href="#">Classificados</a></li>
-	  <li role="presentation"><a href="#">Abrir Chamado</a></li>
-	</ul>
+{% load staticfiles %}
+
+{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-nav.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-buttons.css'%}">
+{% endblock %}
+
+<nav class = "navbar navbar-default" role = "navigation">
+	<div class = "navbar-header">
+		<a class="navbar-brand" href="{% url 'home' %}">Amar Flora</a>
+	</div>
+
+	<div>
+		<ul class = "nav navbar-nav">
+			<li><a href="{% url 'associate-list' %}">Associados</a></li>
+			<li><a href="#">Galeria</a></li>
+			<li><a href="{% url 'news-list' %}">Notícias</a></li>
+			<li><a href="#">Parceiros</a></li>
+			<li><a href="#">Classificados</a></li>
+			<li><a href="#">Abrir Chamado</a></li>
+		</ul>
+	</div>
+   
 </nav>
