@@ -1,5 +1,7 @@
 # coding: utf-8
 
+from django.utils.translation import ugettext as _
+
 from django.db import models
 
 from django.core.validators import MinValueValidator
@@ -13,21 +15,32 @@ class Partner(models.Model):
 
 
 class Associate(models.Model):
-	name = models.CharField(max_length=50)
-	rg = models.CharField(max_length=10)
-	cpf = models.CharField(max_length=11)
-	birthday = models.DateField()
-	phone = models.CharField(max_length=11, blank=True, null=True)
-	cell_phone = models.CharField(max_length=11, blank=True, null=True)
-	street = models.CharField(max_length=100)
-	number = models.IntegerField(null=True, blank=True, validators=[MinValueValidator(1)])
-	complement = models.CharField(max_length=35, blank=True, null=True)
-	email = models.EmailField()
+	name = models.CharField(_('Name'), max_length=50, help_text=_('Enter your name'))
+	rg = models.CharField(_('RG'), max_length=10)
+	cpf = models.CharField(_('CPF'), max_length=11)
+	birthday = models.DateField(_('Birthday'))
+	phone = models.CharField(_('Phone'), max_length=11, blank=True, null=True)
+	cell_phone = models.CharField(_('Cell Phone'), max_length=11, blank=True, null=True)
+	street = models.CharField(_('Street'), max_length=100)
+	number = models.IntegerField(_('Number'), null=True, blank=True, validators=[MinValueValidator(1)])
+	complement = models.CharField(_('Complement'), max_length=35, blank=True, null=True)
+	email = models.EmailField(_('E-mail'))
+
+	class Meta:
+		verbose_name = _('Associate')
+		verbose_name_plural = _('Associates')
 
 
 class News(models.Model):
 	title = models.CharField(max_length=80)
 	description = models.TextField()
+
+	class Meta:
+		verbose_name = _('News')
+		verbose_name_plural = _('News')
+
+	def __str__(self):
+		return self.title
 
 
 class Request(models.Model):
