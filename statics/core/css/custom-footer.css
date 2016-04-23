@@ -1,0 +1,37 @@
+footer{
+	background-color: #44b25a;
+  	border-color: #44b25a;
+}
+
+#rodape{
+	margin-top: 50px;
+}
+
+#endereco_rodape{
+	margin-left: 50px;
+	color: #fff;
+}
+
+#endereco_rodape a{
+	color: #fff;	
+}
+
+#links a{
+	color:#000;
+}
+
+#coluna1{
+	margin-left: 50px;
+}
+
+#coluna2{
+	margin-left: 70px;
+}
+
+#texto_rodape{
+	text-align: center;
+}
+
+.fb-page{
+	margin-left: 70px;
+}
