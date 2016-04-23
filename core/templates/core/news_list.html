@@ -3,15 +3,14 @@
 {% block title %} Notícias {% endblock %}
 
 {% block content %}
-
-	<h1>Últimas notícias</h1>
+	<h1>últimas notícias</h1>
 
 	<ul>
-	{% for new in news %}
+	{%for new in news %}
 		<li>
 			<div>
 				<h2>{{ new.title }}</h2>
-				<p>{{ new.description }}</p>
+				<h2>{{ new.description }}</h2>
 			</div>
 		</li>
 	{% endfor %}

@@ -1,17 +1,135 @@
 {% extends 'core/base.html' %}
 
-{% block title %} Home {% endblock %}
+{% block title %}Home{% endblock %}
+
+{% load staticfiles %}
+
+{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-home.css'%}">
+{% endblock %}
 
 {% block content %}
+	<!--CARROSSEL-->
+	<div class="carousel" id="carousel">
+		<ol class="carousel-indicators">
+			<li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
+			<li data-slide-to="1" data-target="#carousel-example-generic"></li>
+			<li data-slide-to="2" data-target="#carousel-example-generic"></li>
+		</ol>
+
+		<div class="carousel-inner">
+			<div class="item active">
+				<img alt="Carousel Bootstrap First" src="http://lorempixel.com/1400/480/animals">
+				<div class="carousel-caption">
+					<h4>First Thumbnail label</h4>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img alt="Carousel Bootstrap Second" src="http://lorempixel.com/1400/480/animals">
+				<div class="carousel-caption">
+					<h4>Second Thumbnail label</h4>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img alt="Carousel Bootstrap Third" src="http://lorempixel.com/1400/480/animals">
+				<div class="carousel-caption">
+					<h4>Third Thumbnail label</h4>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				</div>
+			</div>
+		</div> 
+					
+		<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a> 
+
+		<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+	<!--FIM CARROSSEL-->
+
 	<h1>Seja bem vindo!</h1>
-	
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+	<div class="row">
+		<div class="col-md-4">
+			<div class="info_centralizada">
+				<img src="http://lorempixel.com/200/200/animals" alt="..." class="img-circle">
+				<h2>Conheça a Amar Flora</h2>
+				<p>Conheça os membros da atual diretoria e tenha acesso ao Estatúto e outros documentos</p>
+				<p>
+					<a class="btn" href="#">View details »</a>
+				</p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="info_centralizada">
+				<img src="http://lorempixel.com/200/200/animals" alt="..." class="img-circle">
+				<h2>Associe-se</h2>
+				<p>Conheça os benefícios de ser um associado</p>
+				<p>
+					<a class="btn" href="#">View details »</a>
+				</p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="info_centralizada">
+				<img src="http://lorempixel.com/200/200/animals" alt="..." class="img-circle">
+				<h2>Nossos parceiros</h2>
+				<p>Conheça nossos parceiros</p>
+				<p>
+					<a class="btn" href="#">View details »</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="info_centralizada">
+				<h2> Seja bem vindo à Amar Flora</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div> 
+		</div>
+
+		<div class="col-md-6">
+			<div class="info_centralizada">
+				<img src="http://lorempixel.com/400/400/animals" alt="..." class="img-circle">
+			</div>
+		</div> 
+	</div>
+	<br><br>
+{% endblock %} 
+
+{% block extra_js %}
+	<script>
+	  $(document).ready(function(){
+	    $('.carousel').carousel();
+	  });
+	</script>
 
 {% endblock %}
