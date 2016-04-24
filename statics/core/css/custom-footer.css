@@ -4,34 +4,32 @@ footer{
 }
 
 #rodape{
-	margin-top: 50px;
-}
-
-#endereco_rodape{
-	margin-left: 50px;
-	color: #fff;
-}
-
-#endereco_rodape a{
-	color: #fff;	
+	margin-top: 40px;
 }
 
 #links a{
-	color:#000;
+	color:#fff;
 }
 
 #coluna1{
-	margin-left: 50px;
+	margin-left: 150px;
+	border-right: 1px #fff solid; 
 }
 
 #coluna2{
-	margin-left: 70px;
+	margin-left: 60px;
 }
 
 #texto_rodape{
 	text-align: center;
+	color: #fff;
 }
 
 .fb-page{
 	margin-left: 70px;
+}
+
+.glyphicon {
+	 font-size: 30px;
+	 color: #fff;
 }
