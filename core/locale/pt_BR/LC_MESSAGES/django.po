@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-01 17:50-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: models.py:11 models.py:25 models.py:69 templates/core/partner_list.html:13
+msgid "Name"
+msgstr "Nome"
+
+#: models.py:12 models.py:29 models.py:70 templates/core/partner_list.html:15
+msgid "Phone"
+msgstr "Telefone"
+
+#: models.py:13 models.py:34 models.py:68 templates/core/partner_list.html:16
+msgid "E-mail"
+msgstr "E-mail"
+
+#: models.py:14 templates/core/partner_list.html.py:14
+msgid "Benefit"
+msgstr "Benefício"
+
+#: models.py:17
+msgid "Partner"
+msgstr "Parceiro"
+
+#: models.py:18 templates/core/partner_list.html.py:5
+msgid "Partners"
+msgstr "Parceiros"
+
+#: models.py:26
+msgid "RG"
+msgstr "RG"
+
+#: models.py:27
+msgid "CPF"
+msgstr "CPF"
+
+#: models.py:28
+msgid "Birthday"
+msgstr "Data de Nascimento"
+
+#: models.py:30
+msgid "Cell Phone"
+msgstr "Celular"
+
+#: models.py:31 models.py:71
+msgid "Street"
+msgstr "Rua"
+
+#: models.py:32 models.py:72
+msgid "Number"
+msgstr "Número"
+
+#: models.py:33 models.py:73
+msgid "Complement"
+msgstr "Complemento"
+
+#: models.py:37
+msgid "Associate"
+msgstr "Associado"
+
+#: models.py:38
+msgid "Associates"
+msgstr "Associados"
+
+#: models.py:46 models.py:47
+msgid "News"
+msgstr "Notícias"
+
+#: models.py:61
+msgid "Others"
+msgstr "Outros"
+
+#: models.py:62
+msgid "Security"
+msgstr "Segurança"
+
+#: models.py:63
+msgid "Lighting"
+msgstr "Iluminação"
+
+#: models.py:64
+msgid "Construction"
+msgstr "Obras"
+
+#: models.py:65
+msgid "Cleaning"
+msgstr "Limpeza"
+
+#: models.py:74 models.py:94
+msgid "Description"
+msgstr "Descrição"
+
+#: models.py:75
+msgid "Status"
+msgstr "Status"
+
+#: models.py:76
+msgid "Subject"
+msgstr "Assunto"
+
+#: models.py:79
+msgid "Request"
+msgstr "Requisição"
+
+#: models.py:80
+msgid "Requests"
+msgstr "Requisições"
+
+#: models.py:93
+msgid "Title"
+msgstr "Título"
+
+#: models.py:95
+msgid "Site"
+msgstr "Site"
+
+#: models.py:98
+msgid "Classified"
+msgstr "Classificado"
+
+#: models.py:99 templates/core/classified_list.html.py:5
+#: templates/core/classified_list.html:8
+msgid "Classifieds"
+msgstr "Classificados"
+
+#: templates/core/classified_list.html:21
+msgid "More Information"
+msgstr "Mais Informações"
+
+#: templates/core/home.html:5
+msgid "Home"
+msgstr "Home"
+
+#: templates/core/partner_list.html:8
+msgid "Partners Amar Flora"
+msgstr "Parceiros Amar Flora"
+
+#: templates/core/request_new.html:33
+msgid "Open Request"
+msgstr "Abrir Chamado"

@@ -1,0 +1,152 @@
+{% extends 'core/base.html' %}
+
+{% load i18n %}
+
+{% load core_extras %}
+
+{% block title %} Novo Associado {% endblock %}
+
+{% block content %}
+	
+	<style type="text/css">
+		.errors {
+			background: #ffcccc;
+			color: #333;
+			margin-top: 5px;
+			font-size: 14px;
+		}
+		.errorlist {
+			list-style-type: none;
+			margin: 0;
+			padding: 10px;
+			-moz-border-radius: 10px; 
+			border-radius: 10px; 
+		}
+		.required {
+			color: #f32;
+			font-weight: bolder;
+		}
+		.alert-success {
+			font-size: 15px;
+			border-radius: 10px;
+			background: #dff0d8;
+			padding-top: 10px;
+		}
+
+		.alert-success ul {
+			list-style-type: none;
+		}
+		
+		.alert-error {
+			font-size: 15px;
+			border-radius: 10px;
+			background: #ffcccc;
+			padding-top: 10px;
+		}
+
+		.alert-error ul {
+			list-style-type: none;
+		}
+	</style>
+
+<div class="row">
+	{% if messages %}
+	  {% for message in messages %}
+			<div class="col-md-12 alert-{{ message.tags }}">
+		  	<div class="col-lg-3">
+		      <ul class="messages">
+		        	<li {% if message.tags %} class="{{ message.tags }}" {% endif %} >{{ message }}</li>
+		      </ul>
+		  	</div>
+			</div>	
+	  {% endfor %}
+
+	{% endif %}
+
+	<div class="col-md-12">
+
+		<h3>{% trans 'Open Request' %}</h3>
+
+		<form action="{% url 'request-new' %}" method="post"> {% csrf_token %}
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<span class="required">*</span> {{ form.email.label_tag }}
+					{{ form.email|add_css:'form-control' }}
+					<div class="errors">
+						{{ form.email.errors }}
+					</div>
+				</div>
+
+				<div class="form-group">
+					<span class="required">*</span> {{ form.name.label_tag }}
+					{{ form.name|add_css:'form-control' }}
+					<div class="errors">
+						{{ form.name.errors }}
+					</div>
+				</div>
+
+				<div class="form-group">
+					<span class="required">*</span> {{ form.phone.label_tag }}
+					{{ form.phone|add_css:'form-control' }}
+					<div class="errors">
+						{{ form.phone.errors }}
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+			
+				<div class="form-group">
+					<span class="required">*</span> {{ form.street.label_tag }}
+					{{ form.street|add_css:'form-control' }}
+					<div class="errors">
+						{{ form.street.errors }}
+					</div>
+				</div>
+
+				<div class="form-group">
+					{{ form.number.label_tag }}
+					{{ form.number|add_css:'form-control' }}
+					<div class="errors">
+						{{ form.number.errors }}
+					</div>
+				</div>
+
+				<div class="form-group">
+					{{ form.complement.label_tag }}
+					{{ form.complement|add_css:'form-control' }}
+					<div class="errors">
+						{{ form.complement.errors }}
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-12">
+
+				<div class="form-group">
+					<span class="required">*</span> {{ form.subject.label_tag }}
+					{{ form.subject|add_css:'form-control' }}
+					<div class="errors">
+						{{ form.subject.errors }}
+					</div>
+				</div>
+
+				<div class="form-group">
+					<span class="required">*</span> {{ form.description.label_tag }}
+					{{ form.description|add_css:'form-control' }}
+					<div class="errors">
+						{{ form.description.errors }}
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-custom">Confirmar</button>
+				<button type="reset" class="btn btn-danger">Cancelar</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% load i18n %}
+
+{% block title %} {% trans 'Partners' %} {% endblock %}
+
+{% block content %}
+	<h1>{% trans 'Partners Amar Flora' %}</h1>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>{% trans 'Name' %}</th>
+				<th>{% trans 'Benefit' %}</th>
+				<th>{% trans 'Phone' %}</th>
+				<th>{% trans 'E-mail' %}</th>
+			</tr>
+		</thead>
+		<tbody>
+		{%for partner in partners %}
+			<tr>
+				<td>{{ partner.name }}</td>
+				<td>{{ partner.benefit }}</td>
+				<td>{{ partner.phone }}</td>
+				<td>{{ partner.email }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %}
