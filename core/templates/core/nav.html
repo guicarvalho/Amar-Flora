@@ -5,13 +5,14 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-buttons.css'%}">
 {% endblock %}
 
-<nav class = "navbar navbar-default" role = "navigation">
-	<div class = "navbar-header">
-		<a class="navbar-brand" href="{% url 'home' %}">Amar Flora</a>
-	</div>
 
+<nav class = "navbar navbar-default" role = "navigation">
+	
+	<img class="logo" src="{% static 'core/images/logo.jpg' %}">
+	
 	<div>
-		<ul class = "nav navbar-nav">
+		<ul class = "nav navbar-nav" id="menu">
+			<li><a href="{% url 'home' %}">Amar Flora</a></li>
 			<li><a href="{% url 'associate-list' %}">Associados</a></li>
 			<li><a href="#">Galeria</a></li>
 			<li><a href="{% url 'news-list' %}">Notícias</a></li>

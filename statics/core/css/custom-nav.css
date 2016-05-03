@@ -67,3 +67,20 @@
     background-color: #44b25a;
   }
 }
+
+#menu{
+  margin-left: 300px;
+}
+
+.img-circle{
+  width: 200px;
+  height: 200px;
+}
+
+.logo{
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 10px;
+}
