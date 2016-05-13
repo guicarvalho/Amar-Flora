@@ -1,19 +1,26 @@
 {% extends 'core/base.html' %}
 
-{% block title %} Notícias {% endblock %}
+{% load i18n %}
+
+{% block title %} {% trans 'News' %} {% endblock %}
 
 {% block content %}
-	<h1>últimas notícias</h1>
+	<h1>{% trans 'Lastest News' %}</h1>
 
-	<ul>
-	{%for new in news %}
-		<li>
-			<div>
-				<h2>{{ new.title }}</h2>
-				<h2>{{ new.description }}</h2>
-			</div>
-		</li>
+	{%for news in list_news %}
+		<div class="row">
+		  <div class="col-md-5">
+	      <a href="#">
+	        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+	      </a>
+		  </div>
+		  <div class="col-md-7">
+	      <h3>{{ news.title }}</h3>
+	      <p>{{ news.description }}</p>
+		  </div>
+		</div>
+
+		<hr>
 	{% endfor %}
-	</ul>
 
 {% endblock %}

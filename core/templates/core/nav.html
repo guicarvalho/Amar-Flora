@@ -1,5 +1,7 @@
 {% load staticfiles %}
 
+{% load i18n %}
+
 {% block extra_css %}
 	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-nav.css'%}">
 	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-buttons.css'%}">
@@ -11,14 +13,13 @@
 	<img class="logo" src="{% static 'core/images/logo.jpg' %}">
 	
 	<div>
-		<ul class = "nav navbar-nav" id="menu">
-			<li><a href="{% url 'home' %}">Amar Flora</a></li>
-			<li><a href="{% url 'associate-list' %}">Associados</a></li>
-			<li><a href="#">Galeria</a></li>
-			<li><a href="{% url 'news-list' %}">Notícias</a></li>
-			<li><a href="{% url 'partner-list' %}">Parceiros</a></li>
-			<li><a href="{% url 'classified-list' %}">Classificados</a></li>
-			<li><a href="{% url 'request-new' %}">Abrir Chamado</a></li>
+		<ul class = "nav navbar-nav">
+			<li><a href="{% url 'associate-list' %}">{% trans 'Associates' %}</a></li>
+			<li><a href="{% url 'gallery-list' %}">{% trans 'Gallery' %}</a></li>
+			<li><a href="{% url 'news-list' %}">{% trans 'News' %}</a></li>
+			<li><a href="{% url 'partner-list' %}">{% trans 'Partners' %}</a></li>
+			<li><a href="{% url 'classified-list' %}">{% trans 'Classifieds' %}</a></li>
+			<li><a href="{% url 'request-new' %}">{% trans 'New Request' %}</a></li>
 		</ul>
 	</div>
    

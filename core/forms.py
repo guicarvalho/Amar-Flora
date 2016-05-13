@@ -9,6 +9,7 @@ class AssociateForm(forms.ModelForm):
 	class Meta:
 		model = Associate
 		fields = '__all__'
+		exclude = ('approved',)
 
 
 class RequestForm(forms.ModelForm):

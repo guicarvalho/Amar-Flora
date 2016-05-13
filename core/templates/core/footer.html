@@ -1,5 +1,7 @@
  {% load staticfiles %}
 
+{% load i18n %}
+
 {% block extra_css %}
 	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-footer.css'%}">
 {% endblock %}
@@ -13,30 +15,30 @@
 						<div class="col-md-6">
 							<div id="coluna1">
 								<br>
-								<a href="#">Home</a>
+								<a href="{% url 'home' %}">Home</a>
 								<br>
-								<a href="#">Amar Flora</a>
+								<a href="{% url 'home' %}">Amar Flora</a>
 								<br>
-								<a href="#">Associados</a>
+								<a href="{% url 'associate-list' %}">{% trans 'Associates' %}</a>
 								<br>
-								<a href="#">Classificados</a>
+								<a href="{% url 'classified-list' %}">{% trans 'Classifieds' %}</a>
 								<br>
-								<a href="#">Galeria</a>
+								<a href="{% url 'gallery-list' %}">{% trans 'Gallery' %}</a>
 								<br><br>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div id="coluna2">
 								<br>
-								<a href="#">Conheça nosso bairro</a>
+								<a href="#">{% trans 'Know our Neighborhood' %}</a>
 								<br>
-								<a href="#">Notícias</a>
+								<a href="{% url 'news-list' %}">{% trans 'News' %}</a>
 								<br>
-								<a href="#">Parceiros</a>
+								<a href="{% url 'partner-list' %}">{% trans 'Partners' %}</a>
 								<br>
-								<a href="#">Abrir chamado</a>
+								<a href="{% url 'request-new' %}">{% trans 'New Request' %}</a>
 								<br>
-								<a href="#">Visualizar chamado</a>
+								<a href="#">{% trans 'View Request' %}</a>
 							</div>
 						</div>
 					</div>

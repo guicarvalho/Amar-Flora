@@ -2,7 +2,7 @@ from django.conf.urls import url
 
 from core.views import (home, list_associate, new_associate,
 					   list_news, list_partner, list_classified,
-					   new_request)
+					   new_request, list_gallery)
 
 
 urlpatterns = [
@@ -18,4 +18,6 @@ urlpatterns = [
     url(r'^classified/$', list_classified, name='classified-list'),
 
     url(r'^request/new/$', new_request, name='request-new'),
+
+    url(r'^gallery/$', list_gallery, name='gallery-list'),
 ]

@@ -32,10 +32,15 @@ class Associate(models.Model):
 	number = models.IntegerField(_('Number'), null=True, blank=True, validators=[MinValueValidator(1)])
 	complement = models.CharField(_('Complement'), max_length=35, blank=True, null=True)
 	email = models.EmailField(_('E-mail'))
+	approved = models.BooleanField(_('Approved'), default=False)
 
 	class Meta:
 		verbose_name = _('Associate')
 		verbose_name_plural = _('Associates')
+
+	def __str__(self):
+		return '{0} - [{1}]'.format(self.name,
+									_('Approved') if self.approved else _('Waiting for approval'))
 
 
 class News(models.Model):
@@ -94,9 +99,16 @@ class Request(models.Model):
 
 
 class Gallery(models.Model):
-	title = models.CharField(max_length=80)
-	description = models.TextField()
-	date = models.DateField()
+	title = models.CharField(_('Title'), max_length=80)
+	description = models.TextField(_('Description'))
+	date = models.DateField(_('Date'))
+
+	class Meta:
+		verbose_name = _('Gallery')
+		verbose_name_plural = _('Galleries')
+
+	def __str__(self):
+		return self.title
 
 
 class Classified(models.Model):
