@@ -2,7 +2,7 @@
 
 {% load core_extras %}
 
-{% block title %} Novo Associado {% endblock %}
+{% block title %} {% 'New Associate' %} {% endblock %}
 
 {% block content %}
 	
@@ -24,7 +24,7 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<h3>Seja bem vindo a Amar Flora</h3>
+		<h1>{% trans 'Become an Affiliate' %}</h1>
 
 		<form action="{% url 'associate-new' %}" method="post"> {% csrf_token %}
 			
@@ -113,8 +113,8 @@
 			</div>
 
 			<div class="col-md-12">
-				<button type="submit" class="btn btn-custom">Confirmar</button>
-				<button type="reset" class="btn btn-danger">Cancelar</button>
+				<button type="submit" class="btn btn-custom">{% trans 'Confirm' %}</button>
+				<button type="reset" class="btn btn-danger">{% trans 'Cancel' %}</button>
 			</div>
 
 		</form>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-01 17:50-0300\n"
+"POT-Creation-Date: 2016-05-01 20:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: models.py:11 models.py:25 models.py:69 templates/core/partner_list.html:13
+#: models.py:11 models.py:25 models.py:84
+#: templates/core/associate_list.html:66 templates/core/partner_list.html:13
 msgid "Name"
 msgstr "Nome"
 
-#: models.py:12 models.py:29 models.py:70 templates/core/partner_list.html:15
+#: models.py:12 models.py:29 models.py:85 templates/core/partner_list.html:15
 msgid "Phone"
 msgstr "Telefone"
 
-#: models.py:13 models.py:34 models.py:68 templates/core/partner_list.html:16
+#: models.py:13 models.py:34 models.py:83
+#: templates/core/associate_list.html:67 templates/core/partner_list.html:16
 msgid "E-mail"
 msgstr "E-mail"
 
@@ -38,7 +40,8 @@ msgstr "Benefício"
 msgid "Partner"
 msgstr "Parceiro"
 
-#: models.py:18 templates/core/partner_list.html.py:5
+#: models.py:18 templates/core/footer.html.py:37 templates/core/nav.html.py:20
+#: templates/core/partner_list.html:5
 msgid "Partners"
 msgstr "Parceiros"
 
@@ -58,99 +61,175 @@ msgstr "Data de Nascimento"
 msgid "Cell Phone"
 msgstr "Celular"
 
-#: models.py:31 models.py:71
+#: models.py:31 models.py:86
 msgid "Street"
 msgstr "Rua"
 
-#: models.py:32 models.py:72
+#: models.py:32 models.py:87
 msgid "Number"
 msgstr "Número"
 
-#: models.py:33 models.py:73
+#: models.py:33 models.py:88
 msgid "Complement"
 msgstr "Complemento"
 
-#: models.py:37
+#: models.py:35 models.py:43
+msgid "Approved"
+msgstr "Aprovado"
+
+#: models.py:38
 msgid "Associate"
 msgstr "Associado"
 
-#: models.py:38
+#: models.py:39 templates/core/associate_list.html.py:5
+#: templates/core/footer.html:22 templates/core/nav.html.py:17
 msgid "Associates"
 msgstr "Associados"
 
-#: models.py:46 models.py:47
+#: models.py:43
+msgid "Waiting for approval"
+msgstr "Aguardando Aprovação"
+
+#: models.py:51 models.py:52 templates/core/footer.html.py:35
+#: templates/core/nav.html:19 templates/core/news_list.html.py:5
 msgid "News"
 msgstr "Notícias"
 
-#: models.py:61
+#: models.py:66
 msgid "Others"
 msgstr "Outros"
 
-#: models.py:62
+#: models.py:67
 msgid "Security"
 msgstr "Segurança"
 
-#: models.py:63
+#: models.py:68
 msgid "Lighting"
 msgstr "Iluminação"
 
-#: models.py:64
+#: models.py:69
 msgid "Construction"
 msgstr "Obras"
 
-#: models.py:65
+#: models.py:70
 msgid "Cleaning"
 msgstr "Limpeza"
 
-#: models.py:74 models.py:94
+#: models.py:78
+msgid "Open"
+msgstr "Aberto"
+
+#: models.py:79
+msgid "Waiting"
+msgstr "Aguardando"
+
+#: models.py:80
+msgid "Closed"
+msgstr "Encerrado"
+
+#: models.py:89 models.py:103 models.py:116
 msgid "Description"
 msgstr "Descrição"
 
-#: models.py:75
+#: models.py:90
 msgid "Status"
 msgstr "Status"
 
-#: models.py:76
+#: models.py:91
 msgid "Subject"
 msgstr "Assunto"
 
-#: models.py:79
+#: models.py:94
 msgid "Request"
 msgstr "Requisição"
 
-#: models.py:80
+#: models.py:95
 msgid "Requests"
 msgstr "Requisições"
 
-#: models.py:93
+#: models.py:102 models.py:115
 msgid "Title"
 msgstr "Título"
 
-#: models.py:95
+#: models.py:104
+msgid "Date"
+msgstr "Data"
+
+#: models.py:107 templates/core/footer.html.py:26
+#: templates/core/gallery_list.html:5 templates/core/nav.html.py:18
+msgid "Gallery"
+msgstr "Galeria"
+
+#: models.py:108
+msgid "Galleries"
+msgstr "Galerias"
+
+#: models.py:117
 msgid "Site"
 msgstr "Site"
 
-#: models.py:98
+#: models.py:120
 msgid "Classified"
 msgstr "Classificado"
 
-#: models.py:99 templates/core/classified_list.html.py:5
-#: templates/core/classified_list.html:8
+#: models.py:121 templates/core/classified_list.html.py:5
+#: templates/core/classified_list.html:8 templates/core/footer.html.py:24
+#: templates/core/nav.html:21
 msgid "Classifieds"
 msgstr "Classificados"
+
+#: templates/core/associate_list.html:61
+msgid "Associate List"
+msgstr "Associados"
+
+#: templates/core/associate_list.html:81 templates/core/associate_new.html:27
+msgid "Become an Affiliate"
+msgstr "Seja um Associado"
+
+#: templates/core/associate_new.html:116 templates/core/request_new.html:144
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: templates/core/associate_new.html:117 templates/core/request_new.html:145
+msgid "Cancel"
+msgstr "Cancelar"
 
 #: templates/core/classified_list.html:21
 msgid "More Information"
 msgstr "Mais Informações"
 
+#: templates/core/footer.html:33
+msgid "Know our Neighborhood"
+msgstr "Conheça nosso Bairro"
+
+#: templates/core/footer.html:39 templates/core/nav.html.py:22
+msgid "New Request"
+msgstr "Abrir Chamado"
+
+#: templates/core/footer.html:41
+msgid "View Request"
+msgstr "Abrir Chamado"
+
 #: templates/core/home.html:5
 msgid "Home"
 msgstr "Home"
+
+#: templates/core/news_list.html:8
+msgid "Lastest News"
+msgstr "Últimas Notícias"
 
 #: templates/core/partner_list.html:8
 msgid "Partners Amar Flora"
 msgstr "Parceiros Amar Flora"
 
-#: templates/core/request_new.html:33
+#: templates/core/request_new.html:67
 msgid "Open Request"
 msgstr "Abrir Chamado"
+
+#: views.py:36
+msgid "Form submitted successfully. Waiting for approval!"
+msgstr "Formulário enviado com sucesso. Aguardando aprovação!"
+
+#: views.py:40
+msgid "The form contains errors."
+msgstr "O formulário contém erros."

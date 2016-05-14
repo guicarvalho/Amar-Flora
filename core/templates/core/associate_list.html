@@ -1,15 +1,82 @@
 {% extends 'core/base.html' %}
 
-{% block title %} Associados {% endblock %}
+{% load i18n %}
+
+{% block title %} {% trans 'Associates' %} {% endblock %}
 
 {% block content %}
-	<h1>Lista de associados Amar Flora</h1>
+	<style type="text/css">
+		.errors {
+			background: #ffcccc;
+			color: #333;
+			margin-top: 5px;
+			font-size: 14px;
+		}
+		.errorlist {
+			list-style-type: none;
+			margin: 0;
+			padding: 10px;
+			-moz-border-radius: 10px; 
+			border-radius: 10px; 
+		}
+		.required {
+			color: #f32;
+			font-weight: bolder;
+		}
+		.alert-success {
+			font-size: 15px;
+			border-radius: 10px;
+			background: #dff0d8;
+			padding-top: 10px;
+		}
 
-	<ul>
-	{%for associate in associates %}
-		<li>{{ associate.name }}</li>
-	{% endfor %}
+		.alert-success ul {
+			list-style-type: none;
+		}
+		
+		.alert-error {
+			font-size: 15px;
+			border-radius: 10px;
+			background: #ffcccc;
+			padding-top: 10px;
+		}
+
+		.alert-error ul {
+			list-style-type: none;
+		}
+	</style>
+
+	{% if messages %}
+	  {% for message in messages %}
+			<div class="col-md-12 alert-{{ message.tags }}">
+		  	<div class="col-lg-3">
+		      <ul class="messages">
+		        	<li {% if message.tags %} class="{{ message.tags }}" {% endif %} >{{ message }}</li>
+		      </ul>
+		  	</div>
+			</div>	
+	  {% endfor %}
+	{% endif %}
+
+	<h1>{% trans 'Associate List' %}</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>{% trans 'Name' %}</th>
+				<th>{% trans 'E-mail' %}</th>
+			</tr>
+		</thead>
+		<tbody>
+		{%for associate in associates %}
+			<tr>
+				<td>{{ associate.name }}</td>
+				<td>{{ associate.email }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
 	</ul>
 
-	<a href="{% url 'associate-new' %}" class="btn btn-lg btn-block btn-custom">Seja um associado</a>
+	<a href="{% url 'associate-new' %}" class="btn btn-lg btn-custom">{% trans 'Become an Affiliate' %}</a>
 {% endblock %}
