@@ -8,17 +8,19 @@
 
 <nav class = "navbar navbar-default" role = "navigation">
 	
-	<img class="logo" src="{% static 'core/images/logo.jpg' %}">
+	<img class="logo" src="{% static 'core/images/logo.png' %}">
 	
 	<div>
 		<ul class = "nav navbar-nav" id="menu">
-			<li><a href="{% url 'home' %}">Amar Flora</a></li>
+			<li><a href="#">Amar Flora</a></li>
+			<li><a href="{% url 'home' %}">Home</a></li>
 			<li><a href="{% url 'associate-list' %}">Associados</a></li>
 			<li><a href="#">Galeria</a></li>
 			<li><a href="{% url 'news-list' %}">Notícias</a></li>
 			<li><a href="{% url 'partner-list' %}">Parceiros</a></li>
 			<li><a href="{% url 'classified-list' %}">Classificados</a></li>
 			<li><a href="{% url 'request-new' %}">Abrir Chamado</a></li>
+			<li><a href="{% url 'request-new' %}">Conheça nosso bairro</a></li>
 		</ul>
 	</div>
    

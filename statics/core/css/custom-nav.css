@@ -72,15 +72,10 @@
   margin-left: 300px;
 }
 
-.img-circle{
-  width: 200px;
-  height: 200px;
-}
-
 .logo{
-  width: 150px;
+  width: 130px;
   height: 100px;
   position: absolute;
-  margin-top: 0;
-  margin-left: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
 }

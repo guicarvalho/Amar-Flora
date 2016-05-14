@@ -5,3 +5,16 @@
 .carousel{
 	margin-top: 60px;
 }
+
+.img-circle{
+  width: 100px;
+  height: 100px;
+}
+
+#linha_informacoes{
+	padding-top: 30px;
+	padding-bottom: 20px;
+	margin-left: 1px;
+	margin-right: 1px;
+	background-color: #44b25a;
+}

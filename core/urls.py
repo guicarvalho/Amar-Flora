@@ -18,4 +18,5 @@ urlpatterns = [
     url(r'^classified/$', list_classified, name='classified-list'),
 
     url(r'^request/new/$', new_request, name='request-new'),
+
 ]
