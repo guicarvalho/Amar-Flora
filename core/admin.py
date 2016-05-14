@@ -1,37 +1,37 @@
 # coding: utf-8
 
-
 from django.contrib import admin
 
-from core.models import (Associate, News, Partner, 
-						 Classified, Request, Gallery)
+from core.models import (Associate, News, Partner, Member,
+                         Classified, Request, Gallery)
 
 
 class AssociateAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 class NewsAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 class PartnerAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 class ClassifiedAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 class RequestAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 class MemberAdmin(admin.ModelAdmin):
     pass
 
+
 class GalleryAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 admin.site.register(Associate, AssociateAdmin)
 admin.site.register(News, NewsAdmin)
