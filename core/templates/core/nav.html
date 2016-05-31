@@ -7,22 +7,19 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-buttons.css'%}">
 {% endblock %}
 
-
 <nav class = "navbar navbar-default" role = "navigation">
-	
-	<img class="logo" src="{% static 'core/images/logo.jpg' %}">
+	<img class="logo" src="{% static 'core/images/logo.png' %}">
 	
 	<div>
-		<ul class = "nav navbar-nav">
-			<li><a href="{% url 'home' %}">Amar Flora</a></li>
-			<li><a href="{% url 'associate-list' %}">{% trans 'Associates' %}</a></li>
-			<li><a href="{% url 'gallery-list' %}">{% trans 'Gallery' %}</a></li>
-			<li><a href="{% url 'news-list' %}">{% trans 'News' %}</a></li>
-			<li><a href="{% url 'partner-list' %}">{% trans 'Partners' %}</a></li>
-			<li><a href="{% url 'classified-list' %}">{% trans 'Classifieds' %}</a></li>
-			<li><a href="{% url 'request-new' %}">{% trans 'New Request' %}</a></li>
-			<li><a href="{% url 'request-new' %}">Conheça nosso bairro</a></li>
+		<ul class = "nav navbar-nav" id = "menu">
+			<li><a href="{% url 'home' %}" >Home</a></li>
+			<li><a href="{% url 'associate-list' %}" >{% trans 'Associates' %}</a></li>
+			<li><a href="{% url 'gallery-list' %}" >{% trans 'Gallery' %}</a></li>
+			<li><a href="{% url 'news-list' %}" >{% trans 'News' %}</a></li>
+			<li><a href="{% url 'partner-list' %}" >{% trans 'Partners' %}</a></li>
+			<li><a href="{% url 'classified-list' %}" >{% trans 'Classifieds' %}</a></li>
+			<li><a href="{% url 'association' %}" > {% trans 'About Amar Flora' %}</a></li>
+			<li><a href="{% url 'request-new' %}" >{% trans 'New Request' %}</a></li>
         </ul>
 	</div>
-   
 </nav>

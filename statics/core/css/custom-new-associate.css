@@ -1,0 +1,19 @@
+.errors {
+	background: #ffcccc;
+	color: #333;
+	margin-top: 5px;
+	font-size: 14px;
+		}
+.errorlist {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	-moz-border-radius: 10px; 
+	border-radius: 10px; 
+}
+
+.btn-confirm {
+  background-color: #44b25a;
+  border-color: #44b25a;
+  color: #fff;
+}

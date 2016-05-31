@@ -2,25 +2,36 @@
 
 {% load i18n %}
 
+{% load staticfiles %}
+
 {% block title %} {% trans 'News' %} {% endblock %}
 
+{% load staticfiles %}
+
+{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-news-list.css'%}">
+{% endblock %}
+
 {% block content %}
-	<h1>{% trans 'Lastest News' %}</h1>
+<div class="body-margin">
+	<br>
+	<div class="news">
+		<h3>{% trans 'News' %}</h3>
 
-	{%for news in list_news %}
-		<div class="row">
-		  <div class="col-md-5">
-	      <a href="#">
-	        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-	      </a>
-		  </div>
-		  <div class="col-md-7">
-	      <h3>{{ news.title }}</h3>
-	      <p>{{ news.description }}</p>
-		  </div>
-		</div>
+		{%for news in list_news %}
+			<div class="row">
+			 	<div class="col-md-12">
+			    	<h3>{{ news.title }}</h3>
+			        <p>{{ news.description }}</p>
 
-		<hr>
-	{% endfor %}
+				  	{%for img in news.image.all %}
+				  		<img src="{{ img.image.url }}" height="200" width="200">
+				  	{% endfor %}
+			  	</div>
+			</div>
+			<hr>
+		{% endfor %}
+	</div>
+</div>
 
 {% endblock %}

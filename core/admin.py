@@ -3,7 +3,8 @@
 from django.contrib import admin
 
 from core.models import (Associate, News, Partner, Member,
-                         Classified, Request, Gallery)
+                         Classified, Request, Gallery, Association_information,
+                         UsefulPhone, ImageNews, ImageClassified)
 
 
 class AssociateAdmin(admin.ModelAdmin):
@@ -33,6 +34,23 @@ class MemberAdmin(admin.ModelAdmin):
 class GalleryAdmin(admin.ModelAdmin):
     pass
 
+
+class AssociationInformationAdmin(admin.ModelAdmin):
+	pass
+
+
+class UsefulPhoneAdmin(admin.ModelAdmin):
+	pass
+
+
+class ImageNewsAdmin(admin.ModelAdmin):
+    pass
+
+
+class ImageClassifiedAdmin(admin.ModelAdmin):
+    pass
+
+
 admin.site.register(Associate, AssociateAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Partner, PartnerAdmin)
@@ -40,3 +58,7 @@ admin.site.register(Classified, ClassifiedAdmin)
 admin.site.register(Request, RequestAdmin)
 admin.site.register(Member, MemberAdmin)
 admin.site.register(Gallery, GalleryAdmin)
+admin.site.register(Association_information, AssociationInformationAdmin)
+admin.site.register(UsefulPhone, UsefulPhoneAdmin)
+admin.site.register(ImageNews, ImageNewsAdmin)
+admin.site.register(ImageClassified, ImageClassifiedAdmin)

@@ -1,10 +1,12 @@
 # coding: utf-8
 
-from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
+
+from django.core.validators import MinValueValidator
 
 from django.db import models
 
-from django.core.validators import MinValueValidator
+from django.utils.translation import ugettext_lazy as _
 
 
 class Partner(models.Model):
@@ -12,6 +14,7 @@ class Partner(models.Model):
     phone = models.CharField(_('Phone'), max_length=11, blank=True, null=True)
     email = models.EmailField(_('E-mail'))
     benefit = models.CharField(_('Benefit'), max_length=100)
+    site = models.URLField(_('Site'))
 
     class Meta:
         verbose_name = _('Partner')
@@ -53,6 +56,15 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ImageNews(models.Model):
+    news_id = models.ForeignKey('core.News', on_delete=models.CASCADE, related_name='image', verbose_name='News')
+    image = models.ImageField(upload_to='news', null=True, blank=True)
+
+    class Meta:
+        verbose_name = _('Image news')
+        verbose_name_plural = _('Images news')
 
 
 class Request(models.Model):
@@ -102,6 +114,7 @@ class Gallery(models.Model):
     title = models.CharField(_('Title'), max_length=80)
     description = models.TextField(_('Description'))
     date = models.DateField(_('Date'))
+    principal_image = models.ImageField(upload_to="Gallery", null=True, blank=True)
 
     class Meta:
         verbose_name = _('Gallery')
@@ -109,6 +122,15 @@ class Gallery(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ImageGallery(models.Model):
+    gallery_id = models.ForeignKey('core.Gallery', on_delete=models.CASCADE, related_name='image', verbose_name='Gallery')
+    image = models.ImageField(upload_to="Gallery", null=True, blank=True)
+
+    class Meta:
+        verbose_name = _('Image gellery')
+        verbose_name_plural = _('Images galleries')
 
 
 class Classified(models.Model):
@@ -124,6 +146,15 @@ class Classified(models.Model):
         return self.title
 
 
+class ImageClassified(models.Model):
+    classified_id = models.ForeignKey('core.Classified', on_delete=models.CASCADE, related_name='image', verbose_name='Classified')
+    image = models.ImageField(upload_to="Classified", null=True, blank=True)
+
+    class Meta:
+        verbose_name = _('Image classified')
+        verbose_name_plural = _('Images classified')
+
+
 class Member(models.Model):
     name = models.CharField(_('Name'), max_length=80)
     email = models.EmailField()
@@ -134,3 +165,58 @@ class Member(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Association_information(models.Model):
+    company_name = models.CharField(_('Company name'), max_length=120)
+    name = models.CharField(_('Name'), max_length=80)
+    cnpj = models.CharField(_('CNPJ'), max_length=18)
+    email = models.EmailField()
+    short_description = models.CharField(_('Short description'), max_length=100)
+    long_description = models.TextField(_('Description'))
+    home_description = models.TextField(_('Description'))
+
+    class Meta:
+        verbose_name = _('Association information')
+        verbose_name_plural = _('Association information')
+
+    def __str__(self):
+        return self.name
+
+
+class UsefulPhone(models.Model):
+    name = models.CharField(_('Name'), max_length=80)
+    phone1 = models.CharField(_('Phone'), max_length=11)
+    phone2 = models.CharField(_('Phone'), max_length=11, blank=True, null=True)
+
+    class Meta:
+        verbose_name = _('Useful_phone')
+        verbose_name_plural = _('Useful_phones')
+
+    def __str__(self):
+        return self.name
+
+
+class CategoryAssociates(models.Model):
+    RESIDENTIAL = 'R'
+    PLOT = 'P'
+    COMPANY = 'C'
+    INDIVIDUAL = 'I'
+
+    STATUS_CHOICES = (
+        (None, ''),
+        (RESIDENTIAL, _('Residential')),
+        (PLOT, _('Plot')),
+        (COMPANY, _('Company')),
+        (INDIVIDUAL, _('Individual')),
+    )
+
+    category_type = models.CharField(_('Subject'), max_length=1, choices=STATUS_CHOICES)
+    price = models.DecimalField(_('Investiment'), max_digits=11, decimal_places=2)
+
+    class Meta:
+        verbose_name = _('Category Associates')
+        verbose_name_plural = _('Categories Associates')
+
+    def __str__(self):
+        return self.category_type

@@ -5,20 +5,23 @@
 {% block title %} {% trans 'Classifieds' %} {% endblock %}
 
 {% block content %}
-	<h1>{% trans 'Classifieds' %}</h1>
+<div class="body-margin">
+	<br>
+	<h3>{% trans 'Classifieds' %}</h3>
+	<p>Conheça algumas empresa que nos apoiam:</p>
 	
 	{%for classified in classifieds %}
 		<div class="row">
-		  <div class="col-md-5">
-	      <a href="#">
-	         <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-	      </a>
-		  </div>
-		  <div class="col-md-7">
-	      <h3>{{ classified.title }}</h3>
-	      <p>{{ classified.description }}</p>
+		 	<div class="col-md-5">
+	      		{%for img in classified.image.all %}
+		  			<img src="{{ img.image.url }}" height="300" width="500">
+		  		{% endfor %}
+		  	</div>
+		  	<div class="col-md-7">
+	      		<h3>{{ classified.title }}</h3>
+	      		<p>{{ classified.description }}</p>
 
-	      <a class="btn btn-primary" href="{{ classified.site }}">{% trans 'More Information' %}
+	      		<a class="btn btn-custom" href="{{ classified.site }}">{% trans 'More Information' %}
 	      	<span class="glyphicon glyphicon-chevron-right">
 	      </a>
 		  </div>
@@ -26,5 +29,6 @@
 
 		<hr>
 	{% endfor %}
+</div>
 
 {% endblock %}

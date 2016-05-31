@@ -2,19 +2,35 @@
 	text-align: center;
 }
 
-.carousel{
-	margin-top: 60px;
+.info_centralizada a {
+	color: #ffffff;
 }
 
 .img-circle{
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 #linha_informacoes{
-	padding-top: 30px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 	margin-left: 1px;
 	margin-right: 1px;
 	background-color: #44b25a;
+	color: #ffffff;
+}
+
+.col-md-5 img{
+	margin-left: 160px;
+
+}
+
+.body-margin{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.carousel2{
+	width: 500px;
+	height: 250px;
 }

@@ -5,6 +5,7 @@
 
 	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-page.css'%}">
 	{% block extra_css %}{% endblock%}
 
 </head>
@@ -12,9 +13,7 @@
 
 	{% include 'core/nav.html' %}
 
-	<div class="container-fluid">
 	{% block content %}{% endblock %}
-	</div>
 
 	<script type="text/javascript" src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>	

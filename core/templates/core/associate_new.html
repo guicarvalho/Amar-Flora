@@ -1,123 +1,155 @@
 {% extends 'core/base.html' %}
 
+{% load i18n %}
+
 {% load core_extras %}
 
-{% block title %} {% 'New Associate' %} {% endblock %}
+{% block title %} {% trans 'New Associate' %} {% endblock %}
+
+{% load staticfiles %}
+
+{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-new-associate.css'%}">
+{% endblock %}
 
 {% block content %}
-	
-	<style type="text/css">
-		.errors {
-			background: #ffcccc;
-			color: #333;
-			margin-top: 5px;
-			font-size: 14px;
-		}
-		.errorlist {
-			list-style-type: none;
-			margin: 0;
-			padding: 10px;
-			-moz-border-radius: 10px; 
-			border-radius: 10px; 
-		}
-	</style>
 
-<div class="row">
-	<div class="col-md-12">
-		<h1>{% trans 'Become an Affiliate' %}</h1>
-
-		<form action="{% url 'associate-new' %}" method="post"> {% csrf_token %}
-			
-			<div class="col-md-6">
-				<div class="form-group">
-					{{ form.name.label_tag }}
-					{{ form.name|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.name.errors }}
+<div class="body-margin">
+	<div class="row">
+		<div class="col-md-6">
+			<form action="{% url 'associate-new' %}" method="post"> {% csrf_token %}
+			<br>
+			<h3>{% trans 'Become an Affiliate' %}</h3>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<span class="required">*</span>{{ form.name.label_tag }}
+							{{ form.name|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.name.errors }}
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<div class="form-group">
-					{{ form.rg.label_tag }}
-					{{ form.rg|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.rg.errors }}
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="required">*</span>{{ form.rg.label_tag }}
+							{{ form.rg|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.rg.errors }}
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="required">*</span>{{ form.cpf.label_tag }}
+							{{ form.cpf|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.cpf.errors }}
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<div class="form-group">
-					{{ form.cpf.label_tag }}
-					{{ form.cpf|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.cpf.errors }}
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="required">*</span>{{ form.birthday.label_tag }}
+							{{ form.birthday|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.birthday.errors }}
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="required">*</span>{{ form.email.label_tag }}
+							{{ form.email|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.email.errors }}
+							</div>
+						</div>
+					</div>
+				</div>
+					
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<span class="required">*</span>{{ form.phone.label_tag }}
+							{{ form.phone|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.phone.errors }}
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="form-group">
+							{{ form.cell_phone.label_tag }}
+							{{ form.cell_phone|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.cell_phone.errors }}
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-10">
+						<div class="form-group">
+							<span class="required">*</span>{{ form.street.label_tag }}
+							{{ form.street|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.street.errors }}
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-2">
+						<div class="form-group">
+							{{ form.number.label_tag }}
+							{{ form.number|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.number.errors }}
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<div class="form-group">
-					{{ form.birthday.label_tag }}
-					{{ form.birthday|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.birthday.errors }}
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							{{ form.complement.label_tag }}
+							{{ form.complement|add_css:'form-control' }}
+							<div class="errors">
+								{{ form.complement.errors }}
+							</div>
+						</div>
 					</div>
 				</div>
-
-				<div class="form-group">
-					{{ form.phone.label_tag }}
-					{{ form.phone|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.phone.errors }}
+				<div class="row">
+					<div class="col-md-12">
+						<button type="submit" class="btn btn-confirm">{% trans 'Confirm' %}</button>
+						<button type="reset" class="btn btn-danger">{% trans 'Cancel' %}</button>
 					</div>
 				</div>
-			</div>
+			</form>
+		</div>
 
-			<div class="col-md-6">
-				<div class="form-group">
-					{{ form.cell_phone.label_tag }}
-					{{ form.cell_phone|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.cell_phone.errors }}
-					</div>
-				</div>
-
-				<div class="form-group">
-					{{ form.street.label_tag }}
-					{{ form.street|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.street.errors }}
-					</div>
-				</div>
-
-				<div class="form-group">
-					{{ form.number.label_tag }}
-					{{ form.number|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.number.errors }}
-					</div>
-				</div>
-
-				<div class="form-group">
-					{{ form.complement.label_tag }}
-					{{ form.complement|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.complement.errors }}
-					</div>
-				</div>
-
-				<div class="form-group">
-					{{ form.email.label_tag }}
-					{{ form.email|add_css:'form-control' }}
-					<div class="errors">
-						{{ form.email.errors }}
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-12">
-				<button type="submit" class="btn btn-custom">{% trans 'Confirm' %}</button>
-				<button type="reset" class="btn btn-danger">{% trans 'Cancel' %}</button>
-			</div>
-
-		</form>
+		<div class="col-md-6">
+			<p> A Amar Flora é mantida pela contribuição dos associados.<br>Seja um associado!
+			</p>
+			<p>Valores</p>
+			<ul>
+				 {% for info in informations %}
+				 	<li>{{ info.get_category_type_display }} : {{ info.price }}</li>
+				 {% endfor %}
+			</ul>
+		</div>
 	</div>
 </div>
 {% endblock %}

@@ -1,0 +1,44 @@
+.errors {
+	background: #ffcccc;
+	color: #333;
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+.errorlist {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	-moz-border-radius: 10px; 
+	border-radius: 10px; 
+}
+
+.required {
+	color: #f32;
+	font-weight: bolder;
+}
+
+.alert-success {
+	font-size: 15px;
+	border-radius: 10px;
+	background: #dff0d8;
+	padding-top: 10px;
+}
+
+.alert-success ul {
+	list-style-type: none;
+}
+	
+.alert-error {
+	font-size: 15px;
+	border-radius: 10px;
+	background: #ffcccc;
+	padding-top: 10px;
+}
+
+.alert-error ul {
+	list-style-type: none;
+}
+
+#botao_associado{
+	margin-left: 550px;

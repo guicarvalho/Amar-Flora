@@ -5,27 +5,32 @@
 {% block title %} {% trans 'Partners' %} {% endblock %}
 
 {% block content %}
-	<h1>{% trans 'Partners Amar Flora' %}</h1>
+	<div class="body-margin">
 
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>{% trans 'Name' %}</th>
-				<th>{% trans 'Benefit' %}</th>
-				<th>{% trans 'Phone' %}</th>
-				<th>{% trans 'E-mail' %}</th>
-			</tr>
-		</thead>
-		<tbody>
-		{%for partner in partners %}
-			<tr>
-				<td>{{ partner.name }}</td>
-				<td>{{ partner.benefit }}</td>
-				<td>{{ partner.phone }}</td>
-				<td>{{ partner.email }}</td>
-			</tr>
-		{% endfor %}
-		</tbody>
-	</table>
+		<h1>{% trans 'Partners' %}</h1>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>{% trans 'Name' %}</th>
+					<th>{% trans 'Benefit' %}</th>
+					<th>{% trans 'Phone' %}</th>
+					<th>{% trans 'E-mail' %}</th>
+					<th>{% trans 'Site' %}</th>
+				</tr>
+			</thead>
+			<tbody>
+			{%for partner in partners %}
+				<tr>
+					<td>{{ partner.name }}</td>
+					<td>{{ partner.benefit }}</td>
+					<td>{{ partner.phone }}</td>
+					<td>{{ partner.email }}</td>
+					<td>{{ partner.site }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
 
 {% endblock %}

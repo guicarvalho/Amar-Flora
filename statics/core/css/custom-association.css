@@ -1,0 +1,29 @@
+.cabecalho{
+	text-align: center;
+}
+
+.col-md-4-left img{
+	margin-top: 20px;
+	margin-left: 330px;
+}
+
+.col-md-4-right img{
+	margin-top: 20px;
+	margin-right: 330px;
+}
+
+.btn-group-vertical{
+	margin-top: 115px;
+}
+
+.col-md-12-right{
+	margin-right: 210px;
+}
+
+.member-style{
+	text-align: center;
+}
+
+#menu_lateral{
+	margin-top: 120px;
+}

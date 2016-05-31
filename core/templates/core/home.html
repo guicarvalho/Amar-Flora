@@ -13,56 +13,47 @@
 {% block content %}
 	<!--CARROSSEL-->
 	<div class="carousel" id="carousel-example-generic">
-		<ol class="carousel-indicators">
-			<li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
-			<li data-slide-to="1" data-target="#carousel-example-generic"></li>
-			<li data-slide-to="2" data-target="#carousel-example-generic"></li>
-		</ol>
-
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
-				<img alt="Carousel Bootstrap First" src="{% static 'core/images/imagem_carrossel.png'%}">
+				<a href="{% url 'associate-new' %}">
+					<img alt="Carousel Bootstrap First" src="{% static 'core/images/imagem_carrossel.png'%}">
+				</a>
 			</div>
-
 			<div class="item">
 				<img alt="Carousel Bootstrap Second" src="http://lorempixel.com/1812/480/animals/">
 			</div>
-
 			<div class="item">
 				<img alt="Carousel Bootstrap Third" src="http://lorempixel.com/1812/480/animals/">
 			</div>
 		</div> 
-					
-		<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a> 
-
-		<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
 	</div>
 	<!--FIM CARROSSEL-->
-	<br>
 	<div class="row" id="linha_informacoes">
 		<div class="col-md-4">
 			<div class="info_centralizada">
-				<img src="{% static 'core/images/amar_flora.png' %}" alt="Amar Flora" class="img-circle" title="Amar Flora">
-				<h2>Conheça a Amar Flora</h2>
-				<p>Conheça os membros da atual diretoria e tenha acesso ao Estatúto e outros documentos</p>
+				<a href="{% url 'association' %}">
+					<img src="{% static 'core/images/amar_flora.png' %}" alt="Amar Flora" class="img-circle" title="Amar Flora">
+					<h3>Conheça a Amar Flora</h3>
+					<p>Associação de moradores da Cácara Flora</p>
+				</a>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="info_centralizada">
-				<img src="{% static 'core/images/associados.png' %}" alt="Associe-e" class="img-circle" title="Associe-se">
-				<h2>Associe-se</h2>
-				<p>Conheça os benefícios de ser um associado</p>
+				<a href="{% url 'associate-new' %}">
+					<img src="{% static 'core/images/associados.png' %}" alt="Associe-e" class="img-circle" title="Associe-se">
+					<h3>Associe-se</h3>
+					<p>Conheça os benefícios de ser um associado</p>
+				</a>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="info_centralizada">
-				<img src="{% static 'core/images/parceiros.png' %}" alt="Nossos parceiros" class="img-circle" title="Nossos parceiros">
-				<h2>Nossos parceiros</h2>
-				<p>Conheça nossos parceiros</p>
+				<a href="{% url 'partner-list' %}" >
+					<img src="{% static 'core/images/parceiros.png' %}" alt="Nossos parceiros" class="img-circle" title="Nossos parceiros">
+					<h3>Nossos parceiros</h3>
+					<p>Conheça nossos parceiros</p>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -72,29 +63,20 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div class="info_centralizada">
-				<h2> Seja bem vindo à Amar Flora</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div class="body-margin">
+					<h2> Seja bem vindo à Amar Flora</h2>
+					<br>
+					{% for information in informations %}
+						<p>{{ information.home_description }}</p>
+					{% endfor%}
+				</div>
 			</div> 
 		</div>
 
-		<div class="col-md-6">
-			<div class="info_centralizada">
-				<img src="http://lorempixel.com/400/400/animals" alt="..." class="img-circle">
-			</div>
+		<div class="col-md-5">
+			<img class="img-rounded" src="{% static 'core/images/coqueiros_flora.jpg' %}">
 		</div> 
 	</div>
-	<br><br>
 {% endblock %} 
 
 {% block extra_js %}
