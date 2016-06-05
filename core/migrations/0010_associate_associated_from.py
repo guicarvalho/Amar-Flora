@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 
+from django.utils import timezone
+
 
 class Migration(migrations.Migration):
 
@@ -15,7 +17,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='associate',
             name='associated_from',
-            field=models.DateField(default=1, verbose_name='Associated from'),
+            field=models.DateField(default=timezone.now, verbose_name='Associated from'),
             preserve_default=False,
         ),
     ]
