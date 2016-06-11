@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% load i18n %}
+
+{% block title %} {% trans 'Associates' %} {% endblock %}
+
+{% load staticfiles %}
+
+{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-page-construction.css'%}">
+{% endblock %}
+
+{% block content %}
+
+	<div class="body-margin">
+		<img alt="Página em construção" src="{% static 'core/images/paginaEmConstrucao.png'%}">
+	</div>
+{% endblock %}

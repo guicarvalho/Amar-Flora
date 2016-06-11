@@ -4,7 +4,7 @@ from django.contrib import admin
 
 from core.models import (Associate, News, Partner, Member,
                          Classified, Request, Gallery, Association_information,
-                         UsefulPhone, ImageNews, ImageClassified)
+                         UsefulPhone, ImageNews, ImageClassified, Document)
 
 
 class AssociateAdmin(admin.ModelAdmin):
@@ -51,6 +51,11 @@ class ImageClassifiedAdmin(admin.ModelAdmin):
     pass
 
 
+class DocumentAdmin(admin.ModelAdmin):
+    pass
+
+
+
 admin.site.register(Associate, AssociateAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Partner, PartnerAdmin)
@@ -62,3 +67,4 @@ admin.site.register(Association_information, AssociationInformationAdmin)
 admin.site.register(UsefulPhone, UsefulPhoneAdmin)
 admin.site.register(ImageNews, ImageNewsAdmin)
 admin.site.register(ImageClassified, ImageClassifiedAdmin)
+admin.site.register(Document, DocumentAdmin)

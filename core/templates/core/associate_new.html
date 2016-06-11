@@ -141,9 +141,12 @@
 		</div>
 
 		<div class="col-md-6">
-			<p> A Amar Flora é mantida pela contribuição dos associados.<br>Seja um associado!
+			<br>
+			<h3>{% trans 'Associe-se' %}</h3>
+			<br>
+			<p>A Amar Flora é mantida pela contribuição dos associados.Seja um associado!
 			</p>
-			<p>Valores</p>
+			<h4>Valores:</h4>
 			<ul>
 				 {% for info in informations %}
 				 	<li>{{ info.get_category_type_display }} : {{ info.price }}</li>

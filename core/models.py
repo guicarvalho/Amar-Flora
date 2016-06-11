@@ -36,6 +36,7 @@ class Associate(models.Model):
     complement = models.CharField(_('Complement'), max_length=35, blank=True, null=True)
     email = models.EmailField(_('E-mail'))
     approved = models.BooleanField(_('Approved'), default=False)
+    associated_from = models.DateField(_('Associated from'))
 
     class Meta:
         verbose_name = _('Associate')
@@ -172,9 +173,9 @@ class Association_information(models.Model):
     name = models.CharField(_('Name'), max_length=80)
     cnpj = models.CharField(_('CNPJ'), max_length=18)
     email = models.EmailField()
-    short_description = models.CharField(_('Short description'), max_length=100)
-    long_description = models.TextField(_('Description'))
-    home_description = models.TextField(_('Description'))
+    short_description = models.CharField(_('Short description'), max_length=100, blank=True, null=True)
+    long_description = models.TextField(_('Long Description'))
+    home_description = models.TextField(_('Home Description'))
 
     class Meta:
         verbose_name = _('Association information')
@@ -203,7 +204,7 @@ class CategoryAssociates(models.Model):
     COMPANY = 'C'
     INDIVIDUAL = 'I'
 
-    STATUS_CHOICES = (
+    CATEGORY_CHOICES = (
         (None, ''),
         (RESIDENTIAL, _('Residential')),
         (PLOT, _('Plot')),
@@ -211,7 +212,7 @@ class CategoryAssociates(models.Model):
         (INDIVIDUAL, _('Individual')),
     )
 
-    category_type = models.CharField(_('Subject'), max_length=1, choices=STATUS_CHOICES)
+    category_type = models.CharField( _('Subject'), max_length=1, choices=CATEGORY_CHOICES)
     price = models.DecimalField(_('Investiment'), max_digits=11, decimal_places=2)
 
     class Meta:
@@ -220,3 +221,29 @@ class CategoryAssociates(models.Model):
 
     def __str__(self):
         return self.category_type
+
+
+class Document(models.Model):
+    STATUTE = 'S'
+    RECORD = 'R'
+    CRAFT = 'C'
+    DOCUMENTS = 'D'
+
+    DOCUMENT_CHOICES = (
+        (None, ''),
+        (STATUTE, _('Statute')),
+        (RECORD, _('Record')),
+        (CRAFT, _('Craft')),
+        (DOCUMENTS, _('Documents'))
+    )
+    name = models.CharField(_('Name'), max_length=80)
+    document_type = models.CharField(_('Documents'), max_length=1, choices=DOCUMENT_CHOICES)
+    document = models.FileField(upload_to="Documents", null=True, blank=True)
+
+    class Meta:
+        verbose_name = _('Document')
+        verbose_name_plural = _('Documents')
+
+    def __str__(self):
+        return self.name
+        

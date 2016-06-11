@@ -111,3 +111,8 @@ def association_information(request):
         'informations': informations,
         'members': members
     })
+
+
+def page_construction(request):
+
+    return render(request, 'core/page_under_construction.html')
