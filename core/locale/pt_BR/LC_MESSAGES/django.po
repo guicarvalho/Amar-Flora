@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-01 20:48-0300\n"
+"POT-Creation-Date: 2016-06-12 02:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,154 +18,373 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: core/models.py:13 core/models.py:28 core/models.py:97 core/models.py:160
+#: core/models.py:174 core/models.py:190 core/models.py:240
+#: core/templates/core/associate_list.html:34
+#: core/templates/core/partner_list.html:15
+#: core/templates/core/request_new.html:142
 msgid "Name"
 msgstr "Nome"
 
+#: core/models.py:14 core/models.py:32 core/models.py:98 core/models.py:191
+#: core/models.py:192 core/templates/core/partner_list.html.py:17
 msgid "Phone"
 msgstr "Telefone"
 
+#: core/models.py:15 core/models.py:37 core/models.py:96
+#: core/templates/core/partner_list.html:18
 msgid "E-mail"
 msgstr "E-mail"
 
+#: core/models.py:16 core/templates/core/partner_list.html.py:16
 msgid "Benefit"
 msgstr "Benefício"
 
-msgid "Partner"
-msgstr "Parceiro"
-
-msgid "Partners"
-msgstr "Parceiros"
-
-msgid "RG"
-msgstr "RG"
-
-msgid "Birthday"
-msgstr "Data de Nascimento"
-
-msgid "Cell Phone"
-msgstr "Celular"
-
-msgid "Street"
-msgstr "Rua"
-
-msgid "Number"
-msgstr "Número"
-
-msgid "Complement"
-msgstr "Complemento"
-
-msgid "Approved"
-msgstr "Aprovado"
-
-msgid "Associate"
-msgstr "Associado"
-
-msgid "Associates"
-msgstr "Associados"
-
-msgid "Waiting for approval"
-msgstr "Aguardando Aprovação"
-
-msgid "News"
-msgstr "Notícias"
-
-msgid "Others"
-msgstr "Outros"
-
-msgid "Security"
-msgstr "Segurança"
-
-msgid "Lighting"
-msgstr "Iluminação"
-
-msgid "Construction"
-msgstr "Obras"
-
-msgid "Cleaning"
-msgstr "Limpeza"
-
-msgid "Open"
-msgstr "Aberto"
-
-msgid "Waiting"
-msgstr "Aguardando"
-
-msgid "Closed"
-msgstr "Encerrado"
-
-msgid "Description"
-msgstr "Descrição"
-
-msgid "Status"
-msgstr "Status"
-
-msgid "Subject"
-msgstr "Assunto"
-
-msgid "Request"
-msgstr "Requisição"
-
-msgid "Requests"
-msgstr "Requisições"
-
-msgid "Title"
-msgstr "Título"
-
-msgid "Date"
-msgstr "Data"
-
-msgid "Gallery"
-msgstr "Galeria"
-
-msgid "Galleries"
-msgstr "Galerias"
-
+#: core/models.py:17 core/models.py:140
+#: core/templates/core/partner_list.html:19
 msgid "Site"
 msgstr "Site"
 
+#: core/models.py:20
+msgid "Partner"
+msgstr "Parceiro"
+
+#: core/models.py:21 core/templates/core/footer.html.py:35
+#: core/templates/core/nav.html:19 core/templates/core/partner_list.html:5
+#: core/templates/core/partner_list.html:10
+msgid "Partners"
+msgstr "Parceiros"
+
+#: core/models.py:29
+msgid "RG"
+msgstr "RG"
+
+#: core/models.py:30
+msgid "CPF"
+msgstr "CPF"
+
+#: core/models.py:31
+msgid "Birthday"
+msgstr "Data de Nascimento"
+
+#: core/models.py:33
+msgid "Cell Phone"
+msgstr "Celular"
+
+#: core/models.py:34 core/models.py:99
+msgid "Street"
+msgstr "Rua"
+
+#: core/models.py:35 core/models.py:100
+msgid "Number"
+msgstr "Número"
+
+#: core/models.py:36 core/models.py:101
+msgid "Complement"
+msgstr "Complemento"
+
+#: core/models.py:38 core/models.py:47
+msgid "Approved"
+msgstr "Aprovado"
+
+#: core/models.py:39 core/templates/core/associate_list.html.py:35
+msgid "Associated from"
+msgstr "Associado desde"
+
+#: core/models.py:42
+msgid "Associate"
+msgstr "Associado"
+
+#: core/models.py:43 core/templates/core/associate_list.html.py:5
+#: core/templates/core/footer.html:20 core/templates/core/nav.html.py:16
+#: core/templates/core/page_under_construction.html:5
+msgid "Associates"
+msgstr "Associados"
+
+#: core/models.py:47
+msgid "Waiting for approval"
+msgstr "Aguardando Aprovação"
+
+#: core/models.py:55 core/models.py:56 core/templates/core/footer.html.py:33
+#: core/templates/core/nav.html:18 core/templates/core/news_list.html.py:7
+#: core/templates/core/news_list.html:18
+msgid "News"
+msgstr "Notícias"
+
+#: core/models.py:67
+msgid "Image news"
+msgstr "Imagem da notícia"
+
+#: core/models.py:68
+msgid "Images news"
+msgstr "Imagens da notícias"
+
+#: core/models.py:79
+msgid "Others"
+msgstr "Outros"
+
+#: core/models.py:80
+msgid "Security"
+msgstr "Segurança"
+
+#: core/models.py:81
+msgid "Lighting"
+msgstr "Iluminação"
+
+#: core/models.py:82
+msgid "Construction"
+msgstr "Obras"
+
+#: core/models.py:83
+msgid "Cleaning"
+msgstr "Limpeza"
+
+#: core/models.py:91
+msgid "Open"
+msgstr "Aberto"
+
+#: core/models.py:92
+msgid "Waiting"
+msgstr "Aguardando"
+
+#: core/models.py:93
+msgid "Closed"
+msgstr "Encerrado"
+
+#: core/models.py:102 core/models.py:116 core/models.py:139
+msgid "Description"
+msgstr "Descrição"
+
+#: core/models.py:103
+msgid "Status"
+msgstr "Status"
+
+#: core/models.py:104 core/models.py:216
+msgid "Subject"
+msgstr "Assunto"
+
+#: core/models.py:107
+msgid "Request"
+msgstr "Requisição"
+
+#: core/models.py:108
+msgid "Requests"
+msgstr "Requisições"
+
+#: core/models.py:115 core/models.py:138
+msgid "Title"
+msgstr "Título"
+
+#: core/models.py:117
+msgid "Date"
+msgstr "Data"
+
+#: core/models.py:121 core/templates/core/footer.html.py:24
+#: core/templates/core/gallery_list.html:5
+#: core/templates/core/gallery_list.html:9 core/templates/core/nav.html:17
+msgid "Gallery"
+msgstr "Galeria"
+
+#: core/models.py:122
+msgid "Galleries"
+msgstr "Galerias"
+
+#: core/models.py:133
+msgid "Image gellery"
+msgstr "Image da galeria"
+
+#: core/models.py:134
+msgid "Images galleries"
+msgstr "Imagens das galerias"
+
+#: core/models.py:143
 msgid "Classified"
 msgstr "Classificado"
 
+#: core/models.py:144 core/templates/core/classified_list.html.py:5
+#: core/templates/core/classified_list.html:10
+#: core/templates/core/footer.html:22 core/templates/core/nav.html.py:20
 msgid "Classifieds"
 msgstr "Classificados"
 
+#: core/models.py:155
+msgid "Image classified"
+msgstr "Imagem do classificado"
+
+#: core/models.py:156
+msgid "Images classified"
+msgstr "Imagens dos classificados"
+
+#: core/models.py:161
+msgid "Charge"
+msgstr "Cargo"
+
+#: core/models.py:165
+msgid "Member"
+msgstr "Membro"
+
+#: core/models.py:166
+msgid "Members"
+msgstr "Membros"
+
+#: core/models.py:173
+msgid "Company name"
+msgstr "Nome da empresa"
+
+#: core/models.py:175
+msgid "CNPJ"
+msgstr "CNPJ"
+
+#: core/models.py:177
+msgid "Short description"
+msgstr "Descrição curta"
+
+#: core/models.py:178
+msgid "Long Description"
+msgstr "Descrição longa"
+
+#: core/models.py:179
+msgid "Home Description"
+msgstr "Descrição da home"
+
+#: core/models.py:182 core/models.py:183
+msgid "Association information"
+msgstr "Informação da associação"
+
+#: core/models.py:195
+msgid "Useful_phone"
+msgstr "Telefone útil"
+
+#: core/models.py:196
+msgid "Useful_phones"
+msgstr "Telefones ùteis"
+
+#: core/models.py:210
+msgid "Residential"
+msgstr "Residencial"
+
+#: core/models.py:211
+msgid "Ground"
+msgstr "Terreno"
+
+#: core/models.py:212
+msgid "Company"
+msgstr "Empresa"
+
+#: core/models.py:213
+msgid "Individual"
+msgstr "Individual"
+
+#: core/models.py:217
+msgid "Price"
+msgstr "Preço"
+
+#: core/models.py:220
+msgid "Category Associates"
+msgstr "Categoria de associado"
+
+#: core/models.py:221
+msgid "Categories Associates"
+msgstr "Categorias de associados"
+
+#: core/models.py:235
+msgid "Statute"
+msgstr "Estatuto"
+
+#: core/models.py:236
+msgid "Record"
+msgstr "Ata"
+
+#: core/models.py:237
+msgid "Craft"
+msgstr "Ofício"
+
+#: core/models.py:238 core/models.py:241 core/models.py:246
+msgid "Documents"
+msgstr "Documentos"
+
+#: core/models.py:245
+msgid "Document"
+msgstr "Documento"
+
+#: core/templates/core/associate_list.html:29
 msgid "Associate List"
 msgstr "Lista de Associados"
 
+#: core/templates/core/associate_list.html:49
+#: core/templates/core/associate_new.html:22
 msgid "Become an Affiliate"
 msgstr "Seja um Associado"
 
+#: core/templates/core/associate_new.html:7
+msgid "New Associate"
+msgstr "Novo Associado"
+
+#: core/templates/core/associate_new.html:136
+#: core/templates/core/request_new.html:127
 msgid "Confirm"
 msgstr "Confirmar"
 
+#: core/templates/core/associate_new.html:137
+#: core/templates/core/request_new.html:128
 msgid "Cancel"
 msgstr "Cancelar"
 
+#: core/templates/core/associate_new.html:145
+#, fuzzy
+#| msgid "Associates"
+msgid "Associe-se"
+msgstr "Associados"
+
+#: core/templates/core/classified_list.html:24
 msgid "More Information"
 msgstr "Mais Informações"
 
-msgid "Know our Neighborhood"
-msgstr "Conheça nosso Bairro"
-
-msgid "New Request"
-msgstr "Abrir Chamado"
-
-msgid "View Request"
-msgstr "Abrir Chamado"
-
+#: core/templates/core/footer.html:18 core/templates/core/home.html.py:5
 msgid "Home"
 msgstr "Home"
 
-msgid "Lastest News"
-msgstr "Últimas Notícias"
+#: core/templates/core/footer.html:31 core/templates/core/nav.html.py:21
+msgid "About Amar Flora"
+msgstr "Sobre a Amar Flora"
 
-msgid "Partners Amar Flora"
-msgstr "Parceiros Amar Flora"
+#: core/templates/core/footer.html:37 core/templates/core/nav.html.py:22
+#: core/templates/core/request_new.html:7
+msgid "New Request"
+msgstr "Abrir Chamado"
+
+#: core/templates/core/home.html:73
+msgid "know more"
+msgstr "Saiba mais"
+
+#: core/templates/core/request_new.html:35
 msgid "Open Request"
 msgstr "Abrir Chamado"
 
+#: core/templates/core/request_new.html:137
+msgid "Useful phones"
+msgstr "Telefones ùteis"
+
+#: core/templates/core/request_new.html:143
+msgid "Phones"
+msgstr "Telefones"
+
+#: core/views.py:48
 msgid "Form submitted successfully. Waiting for approval!"
 msgstr "Formulário enviado com sucesso. Aguardando aprovação!"
 
+#: core/views.py:52
 msgid "The form contains errors."
 msgstr "O formulário contém erros."
+
+#~ msgid "Connect"
+#~ msgstr "Associe-se"
+
+#~ msgid "Know our Neighborhood"
+#~ msgstr "Conheça nosso Bairro"
+
+#~ msgid "View Request"
+#~ msgstr "Abrir Chamado"
+
+#~ msgid "Lastest News"
+#~ msgstr "Últimas Notícias"

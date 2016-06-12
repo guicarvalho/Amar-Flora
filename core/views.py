@@ -130,14 +130,14 @@ def association_information(request):
     members = Member.objects.filter()
     document = Document.objects.all()
 
-    records = document.objects.filter(document_type=Document.RECORD)
-    crafts = document.objects.filter(document_type=Document.CRAFT)
-    documents = document.object.filter(document_type=Document.DOCUMENTS)
+    records = document.filter(document_type=Document.RECORD)
+    crafts = document.filter(document_type=Document.CRAFT)
+    documents = document.filter(document_type=Document.DOCUMENTS)
 
     return render(request, 'core/association.html', {
         'informations': informations,
         'members': members,
         'records': records,
         'crafts': crafts,
-        'documents': documents
+        'documents': documents,
     })

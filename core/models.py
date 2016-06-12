@@ -161,6 +161,7 @@ class ImageClassified(models.Model):
 
 class Member(models.Model):
     name = models.CharField(_('Name'), max_length=80)
+    charge = models.CharField(_('Charge'), max_length=80)
     email = models.EmailField()
 
     class Meta:
@@ -203,20 +204,20 @@ class UsefulPhone(models.Model):
 
 class CategoryAssociates(models.Model):
     RESIDENTIAL = 'R'
-    PLOT = 'P'
+    GROUND = 'G'
     COMPANY = 'C'
     INDIVIDUAL = 'I'
 
     CATEGORY_CHOICES = (
         (None, ''),
         (RESIDENTIAL, _('Residential')),
-        (PLOT, _('Plot')),
+        (GROUND, _('Ground')),
         (COMPANY, _('Company')),
         (INDIVIDUAL, _('Individual')),
     )
 
     category_type = models.CharField( _('Subject'), max_length=1, choices=CATEGORY_CHOICES)
-    price = models.DecimalField(_('Investiment'), max_digits=11, decimal_places=2)
+    price = models.DecimalField(_('Price'), max_digits=11, decimal_places=2)
 
     class Meta:
         verbose_name = _('Category Associates')
