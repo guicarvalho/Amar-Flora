@@ -146,8 +146,10 @@
 						{% for usefulPhone in usefulPhones %}
 							<tr>
 								<td>{{ usefulPhone.name }}</td>
-								<td>{{ usefulPhone.phone1 }}</td>
-								<td>{{ usefulPhone.phone2 }}</td>
+								<td>{{ usefulPhone.phone1 }} 
+								{% if usefulPhone.phone2 %}
+									/ {{ usefulPhone.phone2 }}</td>
+								{% endif %}
 							</tr>
 						{% endfor %}
 					</tbody>

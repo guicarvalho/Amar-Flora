@@ -9,8 +9,9 @@ from core.views import (home, list_associate, new_associate,
 urlpatterns = [
     url(r'^$', home, name='home'),
 
-    url(r'^associate/$', page_construction , name='page-construction'),
-    url(r'^associate/new/$', page_construction, name='page-construction'),
+    url(r'^associate/$', list_associate, name='associate-list'),
+    url(r'^associate/new/$', new_associate, name='associate-new'),
+    url(r'^page-construction/$', page_construction, name='page-construction'),
 
     url(r'^news/$', list_news, name='news-list'),
 

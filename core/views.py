@@ -4,13 +4,17 @@ from django.contrib import messages
 
 from django.shortcuts import render, redirect
 
+from django.core.urlresolvers import reverse
+
 from django.utils.translation import ugettext_lazy as _
 
 from core.forms import AssociateForm, RequestForm
 
 from core.models import (Associate, News, Partner, Classified, Gallery,
                          Association_information, Member, UsefulPhone,
-                         ImageNews, ImageClassified, CategoryAssociates)
+                         ImageNews, ImageClassified, CategoryAssociates,
+                         Document)
+
 
 def home(request):
     informations = Association_information.objects.filter()
@@ -21,6 +25,7 @@ def home(request):
 
 
 def list_associate(request):
+    return redirect(reverse('page-construction'))
     associates = Associate.objects.filter(approved=True)
 
     return render(request, 'core/associate_list.html', {
@@ -29,6 +34,7 @@ def list_associate(request):
 
 
 def new_associate(request):
+    return redirect(reverse('page-construction'))
     form = AssociateForm(request.POST or None)
     informations = CategoryAssociates.objects.filter()
 
@@ -60,6 +66,7 @@ def list_news(request):
 
 
 def list_partner(request):
+    return redirect(reverse('page-construction'))
     partners = Partner.objects.filter()
 
     return render(request, 'core/partner_list.html', {
@@ -68,17 +75,19 @@ def list_partner(request):
 
 
 def list_classified(request):
+    return redirect(reverse('page-construction'))
     classifieds = Classified.objects.filter()
     images = ImageClassified.objects.filter()
 
     return render(request, 'core/classified_list.html', {
-        'classifieds': classifieds, 'images': images
+        'classifieds': classifieds,
+        'images': images,
     })
 
 
 def new_request(request):
     form = RequestForm(request.POST or None)
-    #usefulPhones = UsefulPhone.objects.filter()
+    usefulPhones = UsefulPhone.objects.filter()
 
     if request.POST:
         if form.is_valid():
@@ -91,7 +100,8 @@ def new_request(request):
             messages.error(request, 'O formulário contém erros.')
 
     return render(request, 'core/request_new.html', {
-        'form': form#}, {'usefulPhones': usefulPhones
+        'form': form,
+        'usefulPhones': usefulPhones,
     })
 
 
@@ -103,16 +113,24 @@ def list_gallery(request):
     })
 
 
-def association_information(request):
-    informations = Association_information.objects.filter()
-    members = Member.objects.filter()
-
-    return render(request, 'core/association.html', {
-        'informations': informations,
-        'members': members
-    })
-
-
 def page_construction(request):
 
     return render(request, 'core/page_under_construction.html')
+
+
+def association_information(request):
+    informations = Association_information.objects.filter()
+    members = Member.objects.filter()
+    document = Document.objects.all()
+
+    records = document.objects.filter(document_type=Document.RECORD)
+    crafts = document.objects.filter(document_type=Document.CRAFT)
+    documents = document.object.filter(document_type=Document.DOCUMENTS)
+
+    return render(request, 'core/association.html', {
+        'informations': informations,
+        'members': members,
+        'records': records,
+        'crafts': crafts,
+        'documents': documents
+    })

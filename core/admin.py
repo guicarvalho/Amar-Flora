@@ -36,11 +36,11 @@ class GalleryAdmin(admin.ModelAdmin):
 
 
 class AssociationInformationAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 class UsefulPhoneAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 class ImageNewsAdmin(admin.ModelAdmin):
@@ -53,7 +53,6 @@ class ImageClassifiedAdmin(admin.ModelAdmin):
 
 class DocumentAdmin(admin.ModelAdmin):
     pass
-
 
 
 admin.site.register(Associate, AssociateAdmin)
