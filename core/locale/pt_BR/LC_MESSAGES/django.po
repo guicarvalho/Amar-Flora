@@ -39,8 +39,6 @@ msgstr "Parceiros"
 msgid "RG"
 msgstr "RG"
 
-msgstr "CPF"
-
 msgid "Birthday"
 msgstr "Data de Nascimento"
 

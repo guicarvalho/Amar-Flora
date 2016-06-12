@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+
+{% load i18n %}
+
+{% load staticfiles %}
+
+{% block title %} {% trans 'Gallery' %} {% endblock %}
+
+{% block extra_css %}
+	<link href="{% static 'lightbox2/css/lightbox.css' %}" rel="stylesheet">
+
+	<style type="text/css">
+		.thumbnail img { min-height: 250px; height: 250px; }
+	</style>
+{% endblock %}
+
+{% block content %}
+	<div class="body-margin">
+		<div class="row">
+			<h1>Fotos / {{ event_title }}</h1>
+
+			<div class="row">
+				<div class="col-md-12">
+					{% for image in images %}
+						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+				            <a href="{{ image.image.url }}" class="thumbnail" data-lightbox="roadtrip">
+				                <img class="img-responsive" src="{{ image.image.url }}" alt="image-{{ image.id }}">
+				            </a>
+				        </div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<a href="{% url 'gallery-list' %}">{% trans 'Go back' %}</a>
+{% endblock %}
+
+{% block extra_js %}
+	<script type="text/javascript" src="{% static 'lightbox2/js/lightbox.js' %}"></script>
+{% endblock %}

@@ -126,12 +126,15 @@ class Gallery(models.Model):
 
 
 class ImageGallery(models.Model):
-    gallery_id = models.ForeignKey('core.Gallery', on_delete=models.CASCADE, related_name='image', verbose_name='Gallery')
+    gallery_id = models.ForeignKey('core.Gallery', on_delete=models.CASCADE, related_name='images', verbose_name='Gallery')
     image = models.ImageField(upload_to="Gallery", null=True, blank=True)
 
     class Meta:
         verbose_name = _('Image gellery')
         verbose_name_plural = _('Images galleries')
+
+    def __str__(self):
+        return str(self.image)
 
 
 class Classified(models.Model):
@@ -246,4 +249,3 @@ class Document(models.Model):
 
     def __str__(self):
         return self.name
-        

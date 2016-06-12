@@ -13,7 +13,7 @@ from core.forms import AssociateForm, RequestForm
 from core.models import (Associate, News, Partner, Classified, Gallery,
                          Association_information, Member, UsefulPhone,
                          ImageNews, ImageClassified, CategoryAssociates,
-                         Document)
+                         Document, ImageGallery)
 
 
 def home(request):
@@ -106,11 +106,18 @@ def new_request(request):
 
 
 def list_gallery(request):
-    events = Gallery.objects.filter()
+    events = Gallery.objects.all()
 
     return render(request, 'core/gallery_list.html', {
         'events': events
     })
+
+
+def detail_gallery(request, id):
+    event = Gallery.objects.get(pk=id)
+    images = event.images.all()
+
+    return render(request, 'core/detail_gallery.html', {'images': images, 'event_title': event.title})
 
 
 def page_construction(request):
