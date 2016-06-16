@@ -117,7 +117,10 @@ def detail_gallery(request, id):
     event = Gallery.objects.get(pk=id)
     images = event.images.all()
 
-    return render(request, 'core/detail_gallery.html', {'images': images, 'event_title': event.title})
+    return render(request, 'core/detail_gallery.html', {
+        'images': images,
+        'event_title': event.title,
+        'event_description': event.description})
 
 
 def page_construction(request):

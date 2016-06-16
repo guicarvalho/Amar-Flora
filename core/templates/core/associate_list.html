@@ -13,39 +13,41 @@
 {% block content %}
 
 	<div class="body-margin">
-		{% if messages %}
-		  {% for message in messages %}
-				<div class="col-md-12 alert-{{ message.tags }}">
-			  	<div class="col-lg-3">
-			      <ul class="messages">
-			        	<li {% if message.tags %} class="{{ message.tags }}" {% endif %} >{{ message }}</li>
-			      </ul>
-			  	</div>
-				</div>	
-		  {% endfor %}
-		{% endif %}
+		<div class="container-fluid">
+			{% if messages %}
+			  {% for message in messages %}
+					<div class="col-md-12 alert-{{ message.tags }}">
+				  	<div class="col-lg-3">
+				      <ul class="messages">
+				        	<li {% if message.tags %} class="{{ message.tags }}" {% endif %} >{{ message }}</li>
+				      </ul>
+				  	</div>
+					</div>	
+			  {% endfor %}
+			{% endif %}
 
-		<br>
-		<h3>{% trans 'Associate List' %}</h3>
+			<br>
+			<h3>{% trans 'Associate List' %}</h3>
 
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>{% trans 'Name' %}</th>
-					<th>{% trans 'Associated from' %}</th>
-				</tr>
-			</thead>
-			<tbody>
-			{%for associate in associates %}
-				<tr>
-					<td>{{ associate.name }}</td>
-					<td>{{ associate.associated_from}}</td>
-				</tr>
-			{% endfor %}
-			</tbody>
-		</table>
-		</ul>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>{% trans 'Name' %}</th>
+						<th>{% trans 'Associated from' %}</th>
+					</tr>
+				</thead>
+				<tbody>
+				{%for associate in associates %}
+					<tr>
+						<td>{{ associate.name }}</td>
+						<td>{{ associate.associated_from}}</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+			</ul>
 
-		<a href="{% url 'associate-new' %}" class="btn btn-lg btn-custom" id="botao_associado">{% trans 'Become an Affiliate' %}</a>
+			<a href="{% url 'associate-new' %}" class="btn btn-lg btn-custom" id="botao_associado">{% trans 'Become an Affiliate' %}</a>
+		</div>
 	</div>
 {% endblock %}

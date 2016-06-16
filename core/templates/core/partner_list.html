@@ -6,31 +6,33 @@
 
 {% block content %}
 	<div class="body-margin">
+		<div class="container-fluid">
 
-		<h3>{% trans 'Partners' %}</h3>
+			<h3>{% trans 'Partners' %}</h3>
 
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>{% trans 'Name' %}</th>
-					<th>{% trans 'Benefit' %}</th>
-					<th>{% trans 'Phone' %}</th>
-					<th>{% trans 'E-mail' %}</th>
-					<th>{% trans 'Site' %}</th>
-				</tr>
-			</thead>
-			<tbody>
-			{%for partner in partners %}
-				<tr>
-					<td>{{ partner.name }}</td>
-					<td>{{ partner.benefit }}</td>
-					<td>{{ partner.phone }}</td>
-					<td>{{ partner.email }}</td>
-					<td>{{ partner.site }}</td>
-				</tr>
-			{% endfor %}
-			</tbody>
-		</table>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>{% trans 'Name' %}</th>
+						<th>{% trans 'Benefit' %}</th>
+						<th>{% trans 'Phone' %}</th>
+						<th>{% trans 'E-mail' %}</th>
+						<th>{% trans 'Site' %}</th>
+					</tr>
+				</thead>
+				<tbody>
+				{%for partner in partners %}
+					<tr>
+						<td>{{ partner.name }}</td>
+						<td>{{ partner.benefit }}</td>
+						<td>{{ partner.phone }}</td>
+						<td>{{ partner.email }}</td>
+						<td>{{ partner.site }}</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
 	</div>
 
 {% endblock %}

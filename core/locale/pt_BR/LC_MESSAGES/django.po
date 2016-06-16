@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-12 02:12-0300\n"
+"POT-Creation-Date: 2016-06-16 18:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: core/models.py:13 core/models.py:28 core/models.py:97 core/models.py:160
-#: core/models.py:174 core/models.py:190 core/models.py:240
-#: core/templates/core/associate_list.html:34
-#: core/templates/core/partner_list.html:15
+#: core/models.py:13 core/models.py:28 core/models.py:97 core/models.py:163
+#: core/models.py:178 core/models.py:194 core/models.py:244
+#: core/templates/core/associate_list.html:35
+#: core/templates/core/partner_list.html:16
 #: core/templates/core/request_new.html:142
 msgid "Name"
 msgstr "Nome"
 
-#: core/models.py:14 core/models.py:32 core/models.py:98 core/models.py:191
-#: core/models.py:192 core/templates/core/partner_list.html.py:17
+#: core/models.py:14 core/models.py:32 core/models.py:98 core/models.py:195
+#: core/models.py:196 core/templates/core/partner_list.html.py:18
 msgid "Phone"
 msgstr "Telefone"
 
 #: core/models.py:15 core/models.py:37 core/models.py:96
-#: core/templates/core/partner_list.html:18
+#: core/templates/core/partner_list.html:19
 msgid "E-mail"
 msgstr "E-mail"
 
-#: core/models.py:16 core/templates/core/partner_list.html.py:16
+#: core/models.py:16 core/templates/core/partner_list.html.py:17
 msgid "Benefit"
 msgstr "Benefício"
 
-#: core/models.py:17 core/models.py:140
-#: core/templates/core/partner_list.html:19
+#: core/models.py:17 core/models.py:143
+#: core/templates/core/partner_list.html:20
 msgid "Site"
 msgstr "Site"
 
@@ -51,7 +51,7 @@ msgstr "Parceiro"
 
 #: core/models.py:21 core/templates/core/footer.html.py:35
 #: core/templates/core/nav.html:19 core/templates/core/partner_list.html:5
-#: core/templates/core/partner_list.html:10
+#: core/templates/core/partner_list.html:11
 msgid "Partners"
 msgstr "Parceiros"
 
@@ -87,7 +87,7 @@ msgstr "Complemento"
 msgid "Approved"
 msgstr "Aprovado"
 
-#: core/models.py:39 core/templates/core/associate_list.html.py:35
+#: core/models.py:39 core/templates/core/associate_list.html.py:36
 msgid "Associated from"
 msgstr "Associado desde"
 
@@ -107,7 +107,7 @@ msgstr "Aguardando Aprovação"
 
 #: core/models.py:55 core/models.py:56 core/templates/core/footer.html.py:33
 #: core/templates/core/nav.html:18 core/templates/core/news_list.html.py:7
-#: core/templates/core/news_list.html:18
+#: core/templates/core/news_list.html:19
 msgid "News"
 msgstr "Notícias"
 
@@ -151,7 +151,7 @@ msgstr "Aguardando"
 msgid "Closed"
 msgstr "Encerrado"
 
-#: core/models.py:102 core/models.py:116 core/models.py:139
+#: core/models.py:102 core/models.py:116 core/models.py:142
 msgid "Description"
 msgstr "Descrição"
 
@@ -159,7 +159,7 @@ msgstr "Descrição"
 msgid "Status"
 msgstr "Status"
 
-#: core/models.py:104 core/models.py:216
+#: core/models.py:104 core/models.py:220
 msgid "Subject"
 msgstr "Assunto"
 
@@ -171,7 +171,7 @@ msgstr "Requisição"
 msgid "Requests"
 msgstr "Requisições"
 
-#: core/models.py:115 core/models.py:138
+#: core/models.py:115 core/models.py:141
 msgid "Title"
 msgstr "Título"
 
@@ -179,9 +179,9 @@ msgstr "Título"
 msgid "Date"
 msgstr "Data"
 
-#: core/models.py:121 core/templates/core/footer.html.py:24
-#: core/templates/core/gallery_list.html:5
-#: core/templates/core/gallery_list.html:9 core/templates/core/nav.html:17
+#: core/models.py:121 core/templates/core/detail_gallery.html.py:7
+#: core/templates/core/footer.html:24 core/templates/core/gallery_list.html:5
+#: core/templates/core/gallery_list.html:12 core/templates/core/nav.html:17
 msgid "Gallery"
 msgstr "Galeria"
 
@@ -197,122 +197,122 @@ msgstr "Image da galeria"
 msgid "Images galleries"
 msgstr "Imagens das galerias"
 
-#: core/models.py:143
+#: core/models.py:146
 msgid "Classified"
 msgstr "Classificado"
 
-#: core/models.py:144 core/templates/core/classified_list.html.py:5
-#: core/templates/core/classified_list.html:10
+#: core/models.py:147 core/templates/core/classified_list.html.py:5
+#: core/templates/core/classified_list.html:11
 #: core/templates/core/footer.html:22 core/templates/core/nav.html.py:20
 msgid "Classifieds"
 msgstr "Classificados"
 
-#: core/models.py:155
+#: core/models.py:158
 msgid "Image classified"
 msgstr "Imagem do classificado"
 
-#: core/models.py:156
+#: core/models.py:159
 msgid "Images classified"
 msgstr "Imagens dos classificados"
 
-#: core/models.py:161
+#: core/models.py:164
 msgid "Charge"
 msgstr "Cargo"
 
-#: core/models.py:165
+#: core/models.py:169
 msgid "Member"
 msgstr "Membro"
 
-#: core/models.py:166
+#: core/models.py:170
 msgid "Members"
 msgstr "Membros"
 
-#: core/models.py:173
+#: core/models.py:177
 msgid "Company name"
 msgstr "Nome da empresa"
 
-#: core/models.py:175
+#: core/models.py:179
 msgid "CNPJ"
 msgstr "CNPJ"
 
-#: core/models.py:177
+#: core/models.py:181
 msgid "Short description"
 msgstr "Descrição curta"
 
-#: core/models.py:178
+#: core/models.py:182
 msgid "Long Description"
 msgstr "Descrição longa"
 
-#: core/models.py:179
+#: core/models.py:183
 msgid "Home Description"
 msgstr "Descrição da home"
 
-#: core/models.py:182 core/models.py:183
+#: core/models.py:186 core/models.py:187
 msgid "Association information"
 msgstr "Informação da associação"
 
-#: core/models.py:195
+#: core/models.py:199
 msgid "Useful_phone"
 msgstr "Telefone útil"
 
-#: core/models.py:196
+#: core/models.py:200
 msgid "Useful_phones"
 msgstr "Telefones ùteis"
 
-#: core/models.py:210
+#: core/models.py:214
 msgid "Residential"
 msgstr "Residencial"
 
-#: core/models.py:211
+#: core/models.py:215
 msgid "Ground"
 msgstr "Terreno"
 
-#: core/models.py:212
+#: core/models.py:216
 msgid "Company"
 msgstr "Empresa"
 
-#: core/models.py:213
+#: core/models.py:217
 msgid "Individual"
 msgstr "Individual"
 
-#: core/models.py:217
+#: core/models.py:221
 msgid "Price"
 msgstr "Preço"
 
-#: core/models.py:220
+#: core/models.py:224
 msgid "Category Associates"
 msgstr "Categoria de associado"
 
-#: core/models.py:221
+#: core/models.py:225
 msgid "Categories Associates"
 msgstr "Categorias de associados"
 
-#: core/models.py:235
+#: core/models.py:239
 msgid "Statute"
 msgstr "Estatuto"
 
-#: core/models.py:236
+#: core/models.py:240
 msgid "Record"
 msgstr "Ata"
 
-#: core/models.py:237
+#: core/models.py:241
 msgid "Craft"
 msgstr "Ofício"
 
-#: core/models.py:238 core/models.py:241 core/models.py:246
+#: core/models.py:242 core/models.py:245 core/models.py:250
 msgid "Documents"
 msgstr "Documentos"
 
-#: core/models.py:245
+#: core/models.py:249
 msgid "Document"
 msgstr "Documento"
 
-#: core/templates/core/associate_list.html:29
+#: core/templates/core/associate_list.html:30
 msgid "Associate List"
 msgstr "Lista de Associados"
 
-#: core/templates/core/associate_list.html:49
-#: core/templates/core/associate_new.html:22
+#: core/templates/core/associate_list.html:50
+#: core/templates/core/associate_new.html:23
 msgid "Become an Affiliate"
 msgstr "Seja um Associado"
 
@@ -320,25 +320,29 @@ msgstr "Seja um Associado"
 msgid "New Associate"
 msgstr "Novo Associado"
 
-#: core/templates/core/associate_new.html:136
+#: core/templates/core/associate_new.html:137
 #: core/templates/core/request_new.html:127
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: core/templates/core/associate_new.html:137
+#: core/templates/core/associate_new.html:138
 #: core/templates/core/request_new.html:128
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: core/templates/core/associate_new.html:145
+#: core/templates/core/associate_new.html:146
 #, fuzzy
 #| msgid "Associates"
 msgid "Associe-se"
 msgstr "Associados"
 
-#: core/templates/core/classified_list.html:24
+#: core/templates/core/classified_list.html:25
 msgid "More Information"
 msgstr "Mais Informações"
+
+#: core/templates/core/detail_gallery.html:38
+msgid "Go back gallery"
+msgstr "Voltar para galeria"
 
 #: core/templates/core/footer.html:18 core/templates/core/home.html.py:5
 msgid "Home"
@@ -353,7 +357,11 @@ msgstr "Sobre a Amar Flora"
 msgid "New Request"
 msgstr "Abrir Chamado"
 
-#: core/templates/core/home.html:73
+#: core/templates/core/gallery_list.html:25
+msgid "View all photos"
+msgstr "Ver todas as fotos"
+
+#: core/templates/core/home.html:74
 msgid "know more"
 msgstr "Saiba mais"
 

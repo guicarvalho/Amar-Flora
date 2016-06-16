@@ -15,143 +15,145 @@
 {% block content %}
 
 <div class="body-margin">
-	<div class="row">
-		<div class="col-md-6">
-			<form action="{% url 'associate-new' %}" method="post"> {% csrf_token %}
-			<br>
-			<h3>{% trans 'Become an Affiliate' %}</h3>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<span class="required">*</span>{{ form.name.label_tag }}
-							{{ form.name|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.name.errors }}
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<span class="required">*</span>{{ form.rg.label_tag }}
-							{{ form.rg|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.rg.errors }}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<form action="{% url 'associate-new' %}" method="post"> {% csrf_token %}
+				<br>
+				<h3>{% trans 'Become an Affiliate' %}</h3>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<span class="required">*</span>{{ form.name.label_tag }}
+								{{ form.name|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.name.errors }}
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-md-6">
-						<div class="form-group">
-							<span class="required">*</span>{{ form.cpf.label_tag }}
-							{{ form.cpf|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.cpf.errors }}
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<span class="required">*</span>{{ form.rg.label_tag }}
+								{{ form.rg|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.rg.errors }}
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<span class="required">*</span>{{ form.birthday.label_tag }}
-							{{ form.birthday|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.birthday.errors }}
+						<div class="col-md-6">
+							<div class="form-group">
+								<span class="required">*</span>{{ form.cpf.label_tag }}
+								{{ form.cpf|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.cpf.errors }}
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-md-6">
-						<div class="form-group">
-							<span class="required">*</span>{{ form.email.label_tag }}
-							{{ form.email|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.email.errors }}
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<span class="required">*</span>{{ form.birthday.label_tag }}
+								{{ form.birthday|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.birthday.errors }}
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<span class="required">*</span>{{ form.email.label_tag }}
+								{{ form.email|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.email.errors }}
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+						
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<span class="required">*</span>{{ form.phone.label_tag }}
+								{{ form.phone|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.phone.errors }}
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								{{ form.cell_phone.label_tag }}
+								{{ form.cell_phone|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.cell_phone.errors }}
+								</div>
+							</div>
+						</div>
+					</div>
 					
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<span class="required">*</span>{{ form.phone.label_tag }}
-							{{ form.phone|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.phone.errors }}
+					<div class="row">
+						<div class="col-md-10">
+							<div class="form-group">
+								<span class="required">*</span>{{ form.street.label_tag }}
+								{{ form.street|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.street.errors }}
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-2">
+							<div class="form-group">
+								{{ form.number.label_tag }}
+								{{ form.number|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.number.errors }}
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-md-6">
-						<div class="form-group">
-							{{ form.cell_phone.label_tag }}
-							{{ form.cell_phone|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.cell_phone.errors }}
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								{{ form.complement.label_tag }}
+								{{ form.complement|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.complement.errors }}
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-md-10">
-						<div class="form-group">
-							<span class="required">*</span>{{ form.street.label_tag }}
-							{{ form.street|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.street.errors }}
-							</div>
+					<div class="row">
+						<div class="col-md-12">
+							<button type="submit" class="btn btn-confirm">{% trans 'Confirm' %}</button>
+							<button type="reset" class="btn btn-danger">{% trans 'Cancel' %}</button>
 						</div>
 					</div>
+				</form>
+			</div>
 
-					<div class="col-md-2">
-						<div class="form-group">
-							{{ form.number.label_tag }}
-							{{ form.number|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.number.errors }}
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							{{ form.complement.label_tag }}
-							{{ form.complement|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.complement.errors }}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<button type="submit" class="btn btn-confirm">{% trans 'Confirm' %}</button>
-						<button type="reset" class="btn btn-danger">{% trans 'Cancel' %}</button>
-					</div>
-				</div>
-			</form>
-		</div>
-
-		<div class="col-md-6">
-			<br>
-			<h3>{% trans 'Associe-se' %}</h3>
-			<br>
-			<p>A Amar Flora é mantida pela contribuição dos associados.Seja um associado!
-			</p>
-			<h4>Valores:</h4>
-			<ul>
-				 {% for info in informations %}
-				 	<li>{{ info.get_category_type_display }} : {{ info.price }}</li>
-				 {% endfor %}
-			</ul>
+			<div class="col-md-6">
+				<br>
+				<h3>{% trans 'Associe-se' %}</h3>
+				<br>
+				<p>A Amar Flora é mantida pela contribuição dos associados.Seja um associado!
+				</p>
+				<h4>Valores:</h4>
+				<ul>
+					 {% for info in informations %}
+					 	<li>{{ info.get_category_type_display }} : {{ info.price }}</li>
+					 {% endfor %}
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

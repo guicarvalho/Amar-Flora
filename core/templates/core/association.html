@@ -10,83 +10,87 @@
 
 {% block content %}
 <div class="body-margin">
-	<div class="row">
-		<div class="col-md-2">
-			<ul class="nav nav-pills nav-stacked" id="menu_lateral">
-	    		<li><a href="/media/Documents/Tabela_GFAT.pdf" target="_blank">Estatuto</a></li>
-	    		{%if records%}
-		    		<li class="dropdown">
-		      			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Atas<span class="caret"></span></a>
-					    <ul class="dropdown-menu">
-					    	{%for record in records%}
-					    		<li><a href="{{ record.document.url }}" target="_blank">{{record.name}}</a></li>
-					        {%endfor%}                       
-					    </ul>
-		    		</li>
-		    	{%endif%}
-	    		{%if crafts %}
-		    		<li class="dropdown">
-		    			<a class="dropdown-toggle" data-toggle="dropdown" href="#" >Ofícios<span class="caret"></span></a>
-					    <ul class="dropdown-menu">
-					    	{%for craft in crafts%}
-					        	<li><a href="{{craft.document.url}}" target="_blank">{{craft.name}}</a></li>
-					       	{%endfor%}                  
-					    </ul>
-		    		</li>
-	    		{%endif%}
-				{%if documents%}
-		    		<li class="dropdown">
-		    			<a class="dropdown-toggle" data-toggle="dropdown" href="#" >Documentos<span class="caret"></span></a>
-					    <ul class="dropdown-menu">
-					    	{%for documentInformative in documents%}
-					        	<li><a href="{{documentInformative.document.url}}" target="_blank">{{documentInformative.name}}</a></li>
-					       	{%endfor%}                  
-					    </ul>
-		    		</li>
-		    	{%endif%}
-	  		</ul>
-		</div>
-		<div class="col-md-10">
-			{% for information in informations %}
-				<div class="cabecalho">
-					<div class="row" style="text-align: center"> 
-						<div class="col-md-4-left" >
-							<img src="{% static 'core/images/shape.png'%}" style="float:left;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<ul class="nav nav-pills nav-stacked" id="menu_lateral">
+		    		<li><a href="/media/Documents/Tabela_GFAT.pdf" target="_blank">Estatuto</a></li>
+		    		{%if records%}
+			    		<li class="dropdown">
+			      			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Atas<span class="caret"></span></a>
+						    <ul class="dropdown-menu">
+						    	{%for record in records%}
+						    		<li><a href="{{ record.document.url }}" target="_blank">{{record.name}}</a></li>
+						        {%endfor%}                       
+						    </ul>
+			    		</li>
+			    	{%endif%}
+		    		{%if crafts %}
+			    		<li class="dropdown">
+			    			<a class="dropdown-toggle" data-toggle="dropdown" href="#" >Ofícios<span class="caret"></span></a>
+						    <ul class="dropdown-menu">
+						    	{%for craft in crafts%}
+						        	<li><a href="{{craft.document.url}}" target="_blank">{{craft.name}}</a></li>
+						       	{%endfor%}                  
+						    </ul>
+			    		</li>
+		    		{%endif%}
+					{%if documents%}
+			    		<li class="dropdown">
+			    			<a class="dropdown-toggle" data-toggle="dropdown" href="#" >Documentos<span class="caret"></span></a>
+						    <ul class="dropdown-menu">
+						    	{%for documentInformative in documents%}
+						        	<li><a href="{{documentInformative.document.url}}" target="_blank">{{documentInformative.name}}</a></li>
+						       	{%endfor%}                  
+						    </ul>
+			    		</li>
+			    	{%endif%}
+		  		</ul>
+			</div>
+			<div class="col-md-10">
+				{% for information in informations %}
+					<div class="cabecalho">
+						<div class="row" style="text-align: center"> 
+							<div class="col-md-4-left" >
+								<img src="{% static 'core/images/shape.png'%}" style="float:left;">
+							</div>
+							<div class="col-md-2">
+								<h2>{{ information.name }}</h2>
+							</div>
+							<div class="col-md-4-right">
+								<img src="{% static 'core/images/shape.png'%}" style="float:left;">
+							</div>
 						</div>
-						<div class="col-md-2">
-							<h2>{{ information.name }}</h2>
-						</div>
-						<div class="col-md-4-right">
-							<img src="{% static 'core/images/shape.png'%}" style="float:left;">
+						<div class="row">
+							<div class="col-md-12-right">
+								<b>{{ information.company_name }}</b>
+								<p>CNPJ: {{ information.cnpj }}</p>
+							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12-right">
-							<b>{{ information.company_name }}</b>
-							<p>CNPJ: {{ information.cnpj }}</p>
-						</div>
-					</div>
-				</div>
-				<h4>Sobre Amar flora</h4>
-				<p>{{ information.long_description }}</p>
-			{% endfor %}
-			<hr>
+					<h4>Sobre Amar flora</h4>
+					<p>{{ information.long_description }}</p>
+				{% endfor %}
+				<hr>
 
-			<h4>Membros da diretoria</h4>
-			<div class="row">
-				<br>
-				{% for member in members %}
-					<div class="col-md-3">
-						<div class="member-style">
-							<img src="http://lorempixel.com/150/150"  alt="Amar Flora" class="img-circle" title="Amar Flora">
-							<p>{{ member.name }}</p>
-							<p>{{ member.charge }}</p>
-							<p>{{ member.email }}</p>
+				<h4>Membros da diretoria</h4>
+				<div class="row">
+					<br>
+					{% for member in members %}
+						<div class="col-md-3">
+							<div class="thumbnail">
+								<div class="member-style">
+									<img src="{{ member.image.url }}" height="200" width="200" alt="Amar Flora" class="img-circle" title="Amar Flora">
+									<p>{{ member.name }}</p>
+									<p>{{ member.charge }}</p>
+									<p>{{ member.email }}</p>
+								</div>
+							</div>
 						</div>
-					</div>
-				{% endfor %}		
-			</div>	
-		</div>
-	</div>	
+					{% endfor %}		
+				</div>	
+			</div>
+		</div>	
+	</div>
 </div>
 {% endblock %} 

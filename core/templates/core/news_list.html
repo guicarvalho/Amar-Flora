@@ -14,23 +14,25 @@
 
 {% block content %}
 <div class="body-margin">
-	<br>
-	<h3>{% trans 'News' %}</h3>
-	<div class="news">
+	<div class="container-fluid">
+		<br>
+		<h3>{% trans 'News' %}</h3>
+		<div class="news">
 
-		{%for news in list_news %}
-			<div class="row">
-			 	<div class="col-md-12">
-			    	<h3>{{ news.title }}</h3>
-			        <p>{{ news.description }}</p>
+			{%for news in list_news %}
+				<div class="row">
+				 	<div class="col-md-12">
+				    	<h3>{{ news.title }}</h3>
+				        <p>{{ news.description }}</p>
 
-				  	{%for img in news.image.all %}
-				  		<img src="{{ img.image.url }}" height="200" width="200">
-				  	{% endfor %}
-			  	</div>
-			</div>
-			<hr>
-		{% endfor %}
+					  	{%for img in news.image.all %}
+					  		<img src="{{ img.image.url }}" height="200" width="200">
+					  	{% endfor %}
+				  	</div>
+				</div>
+				<hr>
+			{% endfor %}
+		</div>
 	</div>
 </div>
 

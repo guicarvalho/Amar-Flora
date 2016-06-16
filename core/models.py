@@ -163,6 +163,7 @@ class Member(models.Model):
     name = models.CharField(_('Name'), max_length=80)
     charge = models.CharField(_('Charge'), max_length=80)
     email = models.EmailField()
+    image = models.ImageField(upload_to='members', null=True, blank=True)
 
     class Meta:
         verbose_name = _('Member')

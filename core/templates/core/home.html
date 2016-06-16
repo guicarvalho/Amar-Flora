@@ -60,24 +60,26 @@
 
 	<hr>
 
-	<div class="row">
-		<div class="col-md-6">
-			<div class="info_centralizada">
-				<div class="body-margin">
-					<h2> Seja bem vindo à Amar Flora</h2>
-					<br>
-					{% for information in informations %}
-						<p>{{ information.home_description }}</p>
-					{% endfor%}
-					<br>
-					<a href="{% url 'association' %}" class="btn btn-lg btn-custom" id="botao_associado">{% trans 'know more' %}</a>	
-				</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="info_centralizada">
+					<div class="body-margin">
+						<h2> Seja bem vindo à Amar Flora</h2>
+						<br>
+						{% for information in informations %}
+							<p>{{ information.home_description }}</p>
+						{% endfor%}
+						<br>
+						<a href="{% url 'association' %}" class="btn btn-lg btn-custom" id="botao_associado">{% trans 'know more' %}</a>	
+					</div>
+				</div> 
+			</div>
+
+			<div class="col-md-5">
+				<img class="img-rounded" src="{% static 'core/images/coqueiros_flora.jpg' %}">
 			</div> 
 		</div>
-
-		<div class="col-md-5">
-			<img class="img-rounded" src="{% static 'core/images/coqueiros_flora.jpg' %}">
-		</div> 
 	</div>
 {% endblock %} 
 

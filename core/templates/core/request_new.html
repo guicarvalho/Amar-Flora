@@ -15,146 +15,147 @@
 
 {% block content %}
 <div class="body-margin">
-
-	<div class="row">
-		{% if messages %}
-		  {% for message in messages %}
-		  		<br><br>
-				<div class="col-md-12 alert-{{ message.tags }}">
-			  	<div class="col-lg-3">
-			      <ul class="messages">
-			        	<li {% if message.tags %} class="{{ message.tags }}" {% endif %} >{{ message }}</li>
-			      </ul>
-			  	</div>
-				</div>	
-		  {% endfor %}
-		{% endif %}
-
-		<div class="col-md-6">
-			<br>
-			<h3>{% trans 'Open Request' %}</h3>
-	
-			<form action="{% url 'request-new' %}" method="post"> {% csrf_token %}
-			
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<span class="required">*</span> {{ form.email.label_tag }}
-							{{ form.email|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.email.errors }}
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<span class="required">*</span> {{ form.name.label_tag }}
-							{{ form.name|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.name.errors }}
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-10">
-						<div class="form-group">
-							<span class="required">*</span> {{ form.street.label_tag }}
-							{{ form.street|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.street.errors }}
-							</div>
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="form-group">
-							{{ form.number.label_tag }}
-							{{ form.number|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.number.errors }}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<span class="required">*</span> {{ form.phone.label_tag }}
-							{{ form.phone|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.phone.errors }}
-							</div>
-						</div>
+	<div class="container-fluid">
+		<div class="row">
+			{% if messages %}
+			  {% for message in messages %}
+			  		<br><br>
+					<div class="col-md-12 alert-{{ message.tags }}">
+				  	<div class="col-lg-3">
+				      <ul class="messages">
+				        	<li {% if message.tags %} class="{{ message.tags }}" {% endif %} >{{ message }}</li>
+				      </ul>
+				  	</div>
 					</div>	
-					<div class="col-md-6">
-						<div class="form-group">
-							{{ form.complement.label_tag }}
-							{{ form.complement|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.complement.errors }}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<span class="required">*</span> {{ form.subject.label_tag }}
-							{{ form.subject|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.subject.errors }}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<span class="required">*</span> {{ form.description.label_tag }}
-							{{ form.description|add_css:'form-control' }}
-							<div class="errors">
-								{{ form.description.errors }}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<button type="submit" class="btn btn-confirm">{% trans 'Confirm' %}</button>
-						<button type="reset" class="btn btn-danger">{% trans 'Cancel' %}</button>
-					</div>
-				</div>
-			</form>
-		</div>
+			  {% endfor %}
+			{% endif %}
 
-		<div class="col-md-6">
-		<br>
-			<div class="telefones-uteis">
-				<h3>{% trans 'Useful phones' %}</h3>
+			<div class="col-md-6">
+				<br>
+				<h3>{% trans 'Open Request' %}</h3>
+		
+				<form action="{% url 'request-new' %}" method="post"> {% csrf_token %}
+				
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<span class="required">*</span> {{ form.email.label_tag }}
+								{{ form.email|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.email.errors }}
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<span class="required">*</span> {{ form.name.label_tag }}
+								{{ form.name|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.name.errors }}
+								</div>
+							</div>
+						</div>
+					</div>
 
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>{% trans 'Name' %}</th>
-							<th>{% trans 'Phones' %}</th>
-						</tr>
-					</thead>	
-					<tbody>
-						{% for usefulPhone in usefulPhones %}
+					<div class="row">
+						<div class="col-md-10">
+							<div class="form-group">
+								<span class="required">*</span> {{ form.street.label_tag }}
+								{{ form.street|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.street.errors }}
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								{{ form.number.label_tag }}
+								{{ form.number|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.number.errors }}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<span class="required">*</span> {{ form.phone.label_tag }}
+								{{ form.phone|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.phone.errors }}
+								</div>
+							</div>
+						</div>	
+						<div class="col-md-6">
+							<div class="form-group">
+								{{ form.complement.label_tag }}
+								{{ form.complement|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.complement.errors }}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<span class="required">*</span> {{ form.subject.label_tag }}
+								{{ form.subject|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.subject.errors }}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<span class="required">*</span> {{ form.description.label_tag }}
+								{{ form.description|add_css:'form-control' }}
+								<div class="errors">
+									{{ form.description.errors }}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<button type="submit" class="btn btn-confirm">{% trans 'Confirm' %}</button>
+							<button type="reset" class="btn btn-danger">{% trans 'Cancel' %}</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-6">
+			<br>
+				<div class="telefones-uteis">
+					<h3>{% trans 'Useful phones' %}</h3>
+
+					<table class="table table-striped">
+						<thead>
 							<tr>
-								<td>{{ usefulPhone.name }}</td>
-								<td>{{ usefulPhone.phone1 }} 
-								{% if usefulPhone.phone2 %}
-									/ {{ usefulPhone.phone2 }}</td>
-								{% endif %}
+								<th>{% trans 'Name' %}</th>
+								<th>{% trans 'Phones' %}</th>
 							</tr>
-						{% endfor %}
-					</tbody>
-				</table>
+						</thead>	
+						<tbody>
+							{% for usefulPhone in usefulPhones %}
+								<tr>
+									<td>{{ usefulPhone.name }}</td>
+									<td>{{ usefulPhone.phone1 }} 
+									{% if usefulPhone.phone2 %}
+										/ {{ usefulPhone.phone2 }}</td>
+									{% endif %}
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
