@@ -198,9 +198,6 @@ class UsefulPhone(models.Model):
         verbose_name = _('Useful_phone')
         verbose_name_plural = _('Useful_phones')
 
-    def __str__(self):
-        return self.name
-
     def __unicode__(self):
         return self.name
 
