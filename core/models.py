@@ -191,8 +191,8 @@ class Association_information(models.Model):
 
 class UsefulPhone(models.Model):
     name = models.CharField(_('Name'), max_length=80)
-    phone1 = models.CharField(_('Phone'), max_length=12)
-    phone2 = models.CharField(_('Phone'), max_length=12, blank=True, null=True)
+    phone1 = models.CharField(_('Phone'), max_length=15)
+    phone2 = models.CharField(_('Phone'), max_length=15, blank=True, null=True)
 
     class Meta:
         verbose_name = _('Useful_phone')
