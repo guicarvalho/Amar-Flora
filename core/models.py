@@ -190,7 +190,7 @@ class Association_information(models.Model):
 
 
 class UsefulPhone(models.Model):
-    name = models.CharField(_('Name'), max_length=80)
+    name = models.CharField(_('Name'), max_length=80, verbose_name=u'Name')
     phone1 = models.CharField(_('Phone'), max_length=15)
     phone2 = models.CharField(_('Phone'), max_length=15, blank=True, null=True)
 
