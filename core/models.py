@@ -201,6 +201,9 @@ class UsefulPhone(models.Model):
     def __str__(self):
         return self.name
 
+    def __unicode__(self):
+        return self.name
+
 
 class CategoryAssociates(models.Model):
     RESIDENTIAL = 'R'
