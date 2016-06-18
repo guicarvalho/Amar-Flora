@@ -190,7 +190,7 @@ class Association_information(models.Model):
 
 
 class UsefulPhone(models.Model):
-    name = models.CharField(_('Name'), max_length=80, verbose_name=u'Name')
+    name = models.CharField(_('Name'), max_length=80)
     phone1 = models.CharField(_('Phone'), max_length=15)
     phone2 = models.CharField(_('Phone'), max_length=15, blank=True, null=True)
 
@@ -198,7 +198,7 @@ class UsefulPhone(models.Model):
         verbose_name = _('Useful_phone')
         verbose_name_plural = _('Useful_phones')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
