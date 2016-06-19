@@ -232,14 +232,17 @@ class Document(models.Model):
     RECORD = 'R'
     CRAFT = 'C'
     DOCUMENTS = 'D'
+    SCHEDULE = 'H'
 
     DOCUMENT_CHOICES = (
         (None, ''),
         (STATUTE, _('Statute')),
         (RECORD, _('Record')),
         (CRAFT, _('Craft')),
-        (DOCUMENTS, _('Documents'))
+        (DOCUMENTS, _('Documents')),
+        (SCHEDULE, _('Schedule'))
     )
+
     name = models.CharField(_('Name'), max_length=80)
     document_type = models.CharField(_('Documents'), max_length=1, choices=DOCUMENT_CHOICES)
     document = models.FileField(upload_to="Documents", null=True, blank=True)
