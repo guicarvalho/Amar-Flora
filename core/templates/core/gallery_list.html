@@ -17,7 +17,7 @@
 					<div class="col-md-2">
 						<img class="img-responsive" src="{{ event.principal_image.url }}" alt="{{ event.title }}">
 						
-						<h4>{{ event.title }}</h4>
+						<h5>{{ event.title }}</h5>
 						<b>{{ event.date }}</b>
 						<a class = "btn btn-custom" href="{% url 'detail-gallery' event.id %}">{% trans 'View all photos' %}</a>
 					</div>
