@@ -199,7 +199,7 @@ class UsefulPhone(models.Model):
         verbose_name_plural = _('Useful_phones')
 
     def __str__(self):
-        return u'{}'.format(self.name)
+        return self.name
 
 
 class CategoryAssociates(models.Model):
