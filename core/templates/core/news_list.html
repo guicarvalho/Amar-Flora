@@ -20,11 +20,11 @@
 			{%for news in list_news %}
 				<div class="row">
 				 	<div class="col-md-12" id ="noticia">
-				    	<h3>{{ news.title }}</h3>
+				    	<h3 style="text-align:center;">{{ news.title }}</h3>
 				        <p>{{ news.description }}</p>
 
 					  	{%for img in news.image.all %}
-					  		<img src="{{ img.image.url }}">
+					  		<img src="{{ img.image.url }}" style="text-align:center;">
 					  	{% endfor %}
 				  	</div>
 				</div>
