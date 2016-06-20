@@ -24,7 +24,9 @@
 				        <p>{{ news.description }}</p>
 
 					  	{%for img in news.image.all %}
-					  		<img src="{{ img.image.url }}"/>
+				  			<div class="imagem">
+					  			<img src="{{ img.image.url }}"/>
+					  		</div>
 					  	{% endfor %}
 				  	</div>
 				</div>
