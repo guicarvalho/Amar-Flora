@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-18 23:21-0300\n"
+"POT-Creation-Date: 2016-08-02 21:25-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 #: core/models.py:13 core/models.py:28 core/models.py:97 core/models.py:163
 #: core/models.py:178 core/models.py:193 core/models.py:246
 #: core/templates/core/associate_list.html:35
+#: core/templates/core/association.html:84
 #: core/templates/core/partner_list.html:16
 #: core/templates/core/request_new.html:142
 msgid "Name"
@@ -31,6 +32,7 @@ msgid "Phone"
 msgstr ""
 
 #: core/models.py:15 core/models.py:37 core/models.py:96
+#: core/templates/core/association.html:86
 #: core/templates/core/partner_list.html:19
 msgid "E-mail"
 msgstr ""
@@ -214,7 +216,7 @@ msgstr ""
 msgid "Images classified"
 msgstr ""
 
-#: core/models.py:164
+#: core/models.py:164 core/templates/core/association.html.py:85
 msgid "Charge"
 msgstr ""
 
@@ -360,6 +362,10 @@ msgstr ""
 
 #: core/templates/core/home.html:74
 msgid "know more"
+msgstr ""
+
+#: core/templates/core/nav.html:23
+msgid "Meet Our neighborhood"
 msgstr ""
 
 #: core/templates/core/request_new.html:35

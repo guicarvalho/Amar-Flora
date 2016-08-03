@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-18 23:21-0300\n"
+"POT-Creation-Date: 2016-08-02 21:25-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,7 @@ msgstr ""
 #: core/models.py:13 core/models.py:28 core/models.py:97 core/models.py:163
 #: core/models.py:178 core/models.py:193 core/models.py:246
 #: core/templates/core/associate_list.html:35
+#: core/templates/core/association.html:84
 #: core/templates/core/partner_list.html:16
 #: core/templates/core/request_new.html:142
 msgid "Name"
@@ -32,6 +33,7 @@ msgid "Phone"
 msgstr "Telefone"
 
 #: core/models.py:15 core/models.py:37 core/models.py:96
+#: core/templates/core/association.html:86
 #: core/templates/core/partner_list.html:19
 msgid "E-mail"
 msgstr "E-mail"
@@ -215,7 +217,7 @@ msgstr "Imagem do classificado"
 msgid "Images classified"
 msgstr "Imagens dos classificados"
 
-#: core/models.py:164
+#: core/models.py:164 core/templates/core/association.html.py:85
 msgid "Charge"
 msgstr "Cargo"
 
@@ -365,6 +367,10 @@ msgstr "Ver todas as fotos"
 msgid "know more"
 msgstr "Saiba mais"
 
+#: core/templates/core/nav.html:23
+msgid "Meet Our neighborhood"
+msgstr "Conheça nosso Bairro"
+
 #: core/templates/core/request_new.html:35
 msgid "Open Request"
 msgstr "Abrir Chamado"
@@ -390,9 +396,6 @@ msgstr "O formulário contém erros."
 
 #~ msgid "Connect"
 #~ msgstr "Associe-se"
-
-#~ msgid "Know our Neighborhood"
-#~ msgstr "Conheça nosso Bairro"
 
 #~ msgid "View Request"
 #~ msgstr "Abrir Chamado"
