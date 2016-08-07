@@ -49,7 +49,9 @@ class Associate(models.Model):
 
 class News(models.Model):
     title = models.CharField(max_length=80)
-    description = models.TextField()
+    description = models.TextField(_('Description'))
+    date = models.DateField(_('Date'))
+    principal_image = models.ImageField(upload_to="News", null=True, blank=True)
 
     class Meta:
         verbose_name = _('News')
@@ -60,12 +62,15 @@ class News(models.Model):
 
 
 class ImageNews(models.Model):
-    news_id = models.ForeignKey('core.News', on_delete=models.CASCADE, related_name='image', verbose_name='News')
+    news_id = models.ForeignKey('core.News', on_delete=models.CASCADE, related_name='images', verbose_name='News')
     image = models.ImageField(upload_to='news', null=True, blank=True)
 
     class Meta:
         verbose_name = _('Image news')
         verbose_name_plural = _('Images news')
+
+    def __str__(self):
+        return str(self.image)
 
 
 class Request(models.Model):

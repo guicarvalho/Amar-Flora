@@ -56,15 +56,6 @@ def new_associate(request):
     })
 
 
-def list_news(request):
-    news = News.objects.filter()
-    images = ImageNews.objects.filter()
-
-    return render(request, 'core/news_list.html', {
-        'list_news': news, 'list_images': images
-    })
-
-
 def list_partner(request):
     return redirect(reverse('page-construction'))
     partners = Partner.objects.filter()
@@ -144,3 +135,22 @@ def association_information(request):
         'crafts': crafts,
         'documents': documents,
     })
+
+
+def list_news(request):
+    events = News.objects.all()
+
+    return render(request, 'core/gallery_news.html', {
+        'events': events
+    })
+
+
+def detail_news(request, id):
+    event = News.objects.get(pk=id)
+    images = event.images.all()
+
+    return render(request, 'core/detail_news.html', {
+        'images': images,
+        'event_title': event.title,
+        'event_date': event.date,
+        'event_description': event.description})
