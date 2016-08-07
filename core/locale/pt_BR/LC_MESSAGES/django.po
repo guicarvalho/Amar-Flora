@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-07 19:57-0300\n"
+"POT-Creation-Date: 2016-08-07 20:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -347,7 +347,7 @@ msgid "Go back gallery"
 msgstr "Voltar para galeria"
 
 #: core/templates/core/detail_news.html:36
-msgid "Go back gallery news"
+msgid "Go back to gallery news"
 msgstr "Voltar para galeria de notícias"
 
 #: core/templates/core/footer.html:18 core/templates/core/home.html.py:5
@@ -399,6 +399,9 @@ msgstr "Formulário enviado com sucesso. Aguardando aprovação!"
 #: core/views.py:52
 msgid "The form contains errors."
 msgstr "O formulário contém erros."
+
+#~ msgid "Go back"
+#~ msgstr "Voltar"
 
 #~ msgid "Short description"
 #~ msgstr "Descrição curta"
