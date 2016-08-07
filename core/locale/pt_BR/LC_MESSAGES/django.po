@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-02 23:06-0300\n"
+"POT-Creation-Date: 2016-08-07 19:57-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -347,8 +347,6 @@ msgid "Go back gallery"
 msgstr "Voltar para galeria"
 
 #: core/templates/core/detail_news.html:36
-#, fuzzy
-#| msgid "Go back gallery"
 msgid "Go back gallery news"
 msgstr "Voltar para galeria de notícias"
 
@@ -375,8 +373,6 @@ msgstr "Ver todas as fotos"
 
 #: core/templates/core/gallery_news.html:5
 #: core/templates/core/gallery_news.html:19
-#, fuzzy
-#| msgid "Galleries"
 msgid "Gallery news"
 msgstr "Galeria de notícias"
 
