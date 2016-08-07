@@ -350,7 +350,7 @@ msgstr "Voltar para galeria"
 #, fuzzy
 #| msgid "Go back gallery"
 msgid "Go back gallery news"
-msgstr "Voltar para galeria de nóticias"
+msgstr "Voltar para galeria de notícias"
 
 #: core/templates/core/footer.html:18 core/templates/core/home.html.py:5
 msgid "Home"
@@ -378,7 +378,7 @@ msgstr "Ver todas as fotos"
 #, fuzzy
 #| msgid "Galleries"
 msgid "Gallery news"
-msgstr "Galerias de nóticias"
+msgstr "Galeria de notícias"
 
 #: core/templates/core/home.html:74
 msgid "know more"
