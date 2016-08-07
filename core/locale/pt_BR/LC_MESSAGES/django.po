@@ -374,7 +374,7 @@ msgid "View all photos"
 msgstr "Ver todas as fotos"
 
 #: core/templates/core/gallery_news.html:5
-#: core/templates/core/gallery_news.html:12
+#: core/templates/core/gallery_news.html:19
 #, fuzzy
 #| msgid "Galleries"
 msgid "Gallery news"
