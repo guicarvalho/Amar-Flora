@@ -4,6 +4,13 @@
 
 {% block title %} {% trans 'Gallery news' %} {% endblock %}
 
+
+{% load staticfiles %}
+
+{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom-news-list.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <div class="body-margin">
@@ -15,9 +22,9 @@
 			<div class="row">
 				{% for event in events %}
 					<a href="{% url 'detail-news' event.id %}">
-						<div class="col-md-4">
-							<img class="img-responsive" src="{{ event.principal_image.url }}" alt="{{ event.title }}">
-							<h5>{{ event.title }}</h5>
+						<div class="col-md-3">
+							<img class="img-responsive" id ="img_noticia" src="{{ event.principal_image.url }}" alt="{{ event.title }}">
+							<h4>{{ event.title }}</h4>
 							<br><br>
 						</div>
 					</a>
